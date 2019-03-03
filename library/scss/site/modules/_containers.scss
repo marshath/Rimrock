@@ -1,0 +1,72 @@
+/*
+ *
+ * CONTAINERS
+ *
+ */
+
+
+body {
+	width: 100%; // sets width for grid columns
+	@include clearfix; // fixes height with grid columns
+}
+
+
+/*******************************
+BACKGROUND WRAPS 
+*******************************/
+.wrap,
+.page-wrap {
+	width:100%;
+	display:block;
+	@include clearfix;
+}
+.page-wrap {
+	background-color: #f6f6f6;
+}
+
+.header-wrap,
+.main-wrap,
+.footer-wrap {
+	width:100%;
+	@include clearfix;
+}
+
+.inner-wrap,
+.sidebar {
+	@include column(12);
+}
+
+
+/*******************************
+HEADER
+*******************************/
+.header-wrap {
+	background-color: site-color('foreground');
+	margin-bottom: baseline(0.5);
+}
+
+
+/*******************************
+MAIN 
+*******************************/
+.main-wrap, sidebar {
+	margin-bottom: baseline(1);
+}
+
+
+/*******************************
+SIDEBAR 
+*******************************/
+.sidebar {
+	margin-bottom: baseline(1);
+}
+
+
+/*******************************
+FOOTER 
+*******************************/
+.footer-wrap {
+	background-color: site-color('foreground');
+	padding-top: baseline(2);
+}
+

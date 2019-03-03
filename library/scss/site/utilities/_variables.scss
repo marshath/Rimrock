@@ -1,0 +1,88 @@
+/*
+ *
+ * VARIABLES
+ *
+ * Change the global variables for the site styles here
+ */
+
+
+/*******************************
+GLOBAL STAR SELECTOR 
+*******************************/
+* {
+	background-repeat: no-repeat;
+	box-sizing: border-box; 
+}
+
+/*******************************
+GRID VALUES - utilities/grid
+*******************************/
+$column-width: 6%;
+$gutter-width: 2.333%;
+$columns: 12;
+
+
+/*******************************
+BASELINE GRID - utilities/mixins
+*******************************/
+$baseline: 1.5em;
+
+
+/*******************************
+BORDER RADIUS - utilities/mixins
+*******************************/
+$radius: 6px; /* default value */
+
+
+/*******************************
+FONT FAMILY - utilities/mixins
+*******************************/
+$font-sans: "HelveticaNeue", "Helvetica", "Arial", sans-serif; /* default sans-serif */
+$font-serif: Georgia, Times, "Times New Roman", serif; /* default serif */
+
+
+/*******************************
+FONT SIZE - utilities/font-sizes
+*******************************/
+$font-ems: 0.0625em; // 1px
+
+
+/*******************************
+COLORS - utilities/mixins
+*******************************/
+// BRANDING
+$site-colors: (
+	'primary': #e65e34,		// orange
+	'secondary': #168d48,	// green
+	'accent': #f28f2c,		// yellow
+	'background': #f4ecda,	// tan
+	'foreground': #999,		// gray
+	'text': #222,			// dark-gray
+);
+
+// ALERTS
+$alert-colors: (
+	'error': red,		// red
+	'warning': yellow,	// yellow
+	'good': green,		// green
+);
+
+// SOCIAL MEDIA
+$social-colors: (
+	'twitter': #00aced,		// blue
+	'facebook': #3b5998,	// blue
+	'google': #dd4b39,		// red
+	'pinterest': #cb2027,	// red
+	'linkedin': #007bb6,	// blue
+	'vimeo': #4ebbff,		// blue
+	'youtube': #bb0000,		// red
+	'flickr': #ff0084,		// pink
+	'rss': #ff6600,			// orange
+);
+
+// ALPHA (opacity)
+$color-opacity: (	// set opacity values
+  'light': 0.8,		// opacity used with lighter colors
+  'dark': 0.4,		// opacity used with darker colors
+);
+

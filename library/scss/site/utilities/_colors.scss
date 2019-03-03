@@ -1,0 +1,83 @@
+/*
+ *
+ * COLOR MIXINS
+ *
+ * Variables: site-colors, alert-colors, social-colors, color-opacity
+ * Functions: site-color, alert-color, social-color, color-alpha, site-color-lighten, site-color-darken, site-color-alpha, alert-color-lighten, alert-color-darken, alert-color-alpha
+ */
+
+
+/*******************************
+COLOR -- MIXING FUNCTIONS
+*******************************/
+// For more information on these color mixins, visit https://scotch.io/tutorials/aesthetic-sass-2-colors
+	
+// Function to call the specfic site color using -- site-color('primary')
+@function site-color($site-key: 'primary') {
+	@return map-get($site-colors, $site-key);
+}
+
+// Function to call the specfic alert color using -- alert-color('good')
+@function alert-color($alert-key: 'good') {
+	@return map-get($alert-colors, $alert-key);
+}
+
+// Function to call the specfic social media color using -- social-color('facebook')
+@function social-color($social-key: 'facebook') {
+	@return map-get($social-colors, $social-key);
+}
+
+// Function to call the specfic color-opacity -- color-alpha('light')
+@function color-alpha($alpha-key: 'light') {
+	@return map-get($color-opacity, $alpha-key);
+}
+
+
+/*******************************
+COLOR -- LIGHTEN, DARKEN, ALPHA FUNCTIONS
+*******************************/
+$color-interval: 10% !global; // set incremental tint value
+
+@function site-color-lighten($site-color-name: 'primary', $site-level: 0) { 	// site-color-lighten('primary',2)
+	$site-color: site-color($site-color-name);
+	$site-color-base: white;
+	
+	@return mix($site-color-base, $site-color, $site-level * $color-interval);
+}
+@function site-color-darken($site-color-name: 'primary', $site-level: 0) {		// site-color-darken('primary',2)
+	$site-color: site-color($site-color-name);
+	$site-color-base: black;
+	
+	@return mix($site-color-base, $site-color, $site-level * $color-interval);
+}
+@function site-color-alpha($name: 'primary', $opacity: 0) {						// site-color-alpha('primary', 'light')
+	$color: site-color($name);
+	// Get the named opacity level, if it exists
+	@if map-key-exists( color-alpha(), $opacity) {
+		$opacity: map-get($color-opacity, $opacity);
+	}
+	// Use rgba() to manipulate the color's alpha level
+	@return rgba($color, $opacity);
+}
+
+@function alert-color-lighten($alert-color-name: 'primary', $alert-level: 0) {	// alert-color-lighten('good',2)
+	$alert-color: alert-color($alert-color-name);
+	$alert-color-base: white;
+	
+	@return mix($alert-color-base, $alert-color, $alert-level * $color-interval);
+}
+@function alert-color-darken($alert-color-name: 'primary', $alert-level: 0) {	// alert-color-darken('good',2)
+	$alert-color: alert-color($alert-color-name);
+	$alert-color-base: black;
+	
+	@return mix($alert-color-base, $alert-color, $alert-level * $color-interval);
+}
+@function alert-color-alpha($name: 'good', $opacity: 0) {						// alert-color-alpha('good', 'light')
+	$color: alert-color($name);
+	// Get the named opacity level, if it exists
+	@if map-key-exists( color-alpha(), $opacity) {
+		$opacity: map-get($color-opacity, $opacity);
+	}
+	// Use rgba() to manipulate the color's alpha level
+	@return rgba($color, $opacity);
+}
