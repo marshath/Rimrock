@@ -1,18 +1,22 @@
 <?php
 /*
-Author: Eddie Machado
-URL: http://themble.com/bones/
+Author: Theodore Marshall
+URL: http://33degreesds.com/
 
-This is where you can drop your custom functions or
-just edit things like thumbnail sizes, header images,
-sidebars, comments, ect.
+This is where you can place custom functions or edit things 
+such as thumbnail sizes, header image, sidebars, comments, ect.
 */
+
+// CHANGE THE WORDPRESS URL
+// update_option('siteurl','http://localhost:8888/_templates/degrees-wp');
+// update_option('home','http://localhost:8888/_templates/degrees-wp');
+
 
 // LOAD BONES CORE (if you remove this, the theme will break)
 require_once( 'library/bones.php' );
 
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
-// require_once( 'library/admin.php' );
+require_once( 'library/admin.php' );
 
 /*********************
 LAUNCH BONES
@@ -28,7 +32,7 @@ function bones_ahoy() {
 	load_theme_textdomain( 'bonestheme', get_template_directory() . '/library/translation' );
 
 	// USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
-	require_once( 'library/custom-post-type.php' );
+	// require_once( 'library/custom-post-type.php' );
 
 	// launching operation cleanup
 	add_action( 'init', 'bones_head_cleanup' );
@@ -155,39 +159,35 @@ add_action( 'customize_register', 'bones_theme_customizer' );
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
 	register_sidebar(array(
-		'id' => 'sidebar1',
-		'name' => __( 'Sidebar 1', 'bonestheme' ),
-		'description' => __( 'The first (primary) sidebar.', 'bonestheme' ),
+		'id' => 'sidebar-blog',
+		'name' => __( 'Sidebar —Blog', 'bonestheme' ),
+		'description' => __( 'The blog sidebar.', 'bonestheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
-
-	/*
-	to add more sidebars or widgetized areas, just copy
-	and edit the above sidebar code. In order to call
-	your new sidebar just use the following code:
-
-	Just change the name to whatever your new
-	sidebar's id is, for example:
-
+	
 	register_sidebar(array(
-		'id' => 'sidebar2',
-		'name' => __( 'Sidebar 2', 'bonestheme' ),
-		'description' => __( 'The second (secondary) sidebar.', 'bonestheme' ),
+		'id' => 'sidebar-contact',
+		'name' => __( 'Sidebar —Contact', 'bonestheme' ),
+		'description' => __( 'The Contact page sidebar.', 'bonestheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
-
-	To call the sidebar in your template, you can just copy
-	the sidebar.php file and rename it to your sidebar's name.
-	So using the above example, it would be:
-	sidebar-sidebar2.php
-
-	*/
+	
+	register_sidebar(array(
+		'id' => 'footer1',
+		'name' => __( 'Footer —Company', 'bonestheme' ),
+		'description' => __( 'The company information in the footer.', 'bonestheme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+	
 } // don't remove this bracket!
 
 
@@ -199,15 +199,18 @@ function bones_comments( $comment, $args, $depth ) {
 	<div id="comment-<?php comment_ID(); ?>" <?php comment_class('cf'); ?>>
 		<article  class="cf">
 			<header class="comment-author vcard">
-				<?php
-				/*
-					this is the new responsive optimized comment image. It used the new HTML5 data-attribute to display comment gravatars on larger screens only. What this means is that on larger posts, mobile sites don't have a ton of requests for comment images. This makes load time incredibly fast! If you'd like to change it back, just replace it with the regular wordpress gravatar call:
+				<?php /* this is the new responsive optimized comment image. It used 
+					the new HTML5 data-attribute to display comment gravatars on larger 
+					screens only. What this means is that on larger posts, mobile sites 
+					don't have a ton of requests for comment images. This makes load time 
+					incredibly fast! If you'd like to change it back, just replace it 
+					with the regular wordpress gravatar call:
+					
 					echo get_avatar($comment,$size='32',$default='<path_to_url>' );
-				*/
-				?>
+					
+				*/ ?>
 				<?php // custom gravatar call ?>
-				<?php
-					// create variable
+				<?php // create variable
 					$bgauthemail = get_comment_author_email();
 				?>
 				<img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=40" class="load-gravatar avatar avatar-48 photo" height="40" width="40" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
@@ -227,21 +230,15 @@ function bones_comments( $comment, $args, $depth ) {
 			<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 		</article>
 	<?php // </li> is added by WordPress automatically ?>
-<?php
-} // don't remove this bracket!
+<?php } // don't remove this bracket!
 
 
 /*
-This is a modification of a function found in the
-twentythirteen theme where we can declare some
-external fonts. If you're using Google Fonts, you
-can replace these fonts, change it in your scss files
-and be up and running in seconds.
+This is a modification of a function found in the twentythirteen theme where we can declare some external fonts. If you're using Google Fonts, you can replace these fonts, change it in your scss files and be up and running in seconds.
 */
 function bones_fonts() {
 	wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
 }
-
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
 // Enable support for HTML5 markup.

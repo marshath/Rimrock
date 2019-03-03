@@ -1,15 +1,24 @@
-///////////////////
-// Header Styles //
-///////////////////
+/*
+ *
+ * HEADER STYLES
+ *
+ */
 
 
-hgroup {
-	
+/*******************************
+HEADER
+*******************************/
+.header-logo {
+	width:30%;
+	max-width: 260px;
+	margin-top: baseline(1);
+	text-align: center;
 }
 
-.header {
-	.nav-toggle {
-		margin-top: -($base*1);
-		float: right;
+
+#menu-toggle { // toggles the menu visibity for mobile
+	display: block;
+	@include bp('tablet-v') {
+		display: none;
 	}
 }

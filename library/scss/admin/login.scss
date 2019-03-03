@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: Degrees
+Author: Theodore Marshall
 
 Stylesheet: Login Stylesheet
 
@@ -69,13 +69,12 @@ but since we're referencing the id, it should be easy.
 /*
 retina login logo
 */
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min--moz-device-pixel-ratio: 1.5),
-       only screen and (min-device-pixel-ratio: 1.5) {
+@media only screen and (min-device-pixel-ratio: 1.5) {
 
   // you can put your 2x logo in here
   .login h1 a {
-		background: url(../images/login-logo@2x.png) no-repeat top center; /* make sure to replace this! */
+		background-image: url(../images/login-logo@2x.png) no-repeat top center; /* make sure to replace this! */
+		background-size: 326px 67px;
 	}
 
 } // end retina media query

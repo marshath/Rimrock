@@ -1,16 +1,20 @@
-//////////////////
-// Image Styles //
-//////////////////
+/*
+ *
+ * IMAGE STYLES
+ *
+ */
 
 
 /* Handles responsive imagery 
-* Resizes all images to 100% until they reach their max width */
+ * Resizes all images to 100% until they reach their max width */
 img { 
-	max-width:100%;
+	width:100%;
 }
 
 
-/* -------------------- */
-/* ------- Logo ------- */
-/* -------------------- */
-
+/*******************************
+GLOBAL IMAGES
+*******************************/
+figure {
+	
+}

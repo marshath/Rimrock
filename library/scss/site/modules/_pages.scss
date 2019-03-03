@@ -1,69 +1,14 @@
-/////////////////
-// Page Styles //
-/////////////////
+/*
+ *
+ * PAGE STYLES
+ *
+ */
 
 
-/* ---------------------------- */
-/* ------- Generic Grid ------- */
-/* ---------------------------- */
-
-.grid1, .grid2, .grid3, .grid4 {
-	color: white;
-	text-align: center;
-}
-.grid1, .grid3 {
-	background: $gray-light;
-}
-.grid2, .grid4 {
-	background: $gray-dark;
-}
-.grid1 { /* desktop layout */
-	@include column(12);
-}
-.grid2 {
-	@include column(6);
-}
-.grid3 {
-	@include column(4);
-}
-.grid4 {
-	@include column(3);
-}
-@include bp(tablet-only) { /* tablet layout */
-	.grid2 {
-		@include column(6);
-	}
-	.grid3 {
-		@include column(6);
-	}
-	.grid4 {
-		@include column(6);
-	}
-}
-@include bp(mobile-only) { /* mobile layout */
-	.grid2, .grid3, .grid4 {
-		@include column(12);
-	}
-}
-
-
-/* ---------------------- */
-/* ------- Figure ------- */
-/* ---------------------- */
-
-figure {
-	figcaption {
-		color: $gray-light;
-		font-style: italic;
-	}
-}
-
-
-/* -------------------- */
-/* ------- Blog ------- */
-/* -------------------- */
-
-/* Blog Archive List */
+/*******************************
+BLOG
+*******************************/
+// BLOG ARCHIVE LIST
 .block-thumb {
 	.b-inner {
 		@include clearfix;
@@ -95,30 +40,28 @@ figure {
 	}
 	.b-text {
 		background: black;
-		margin-top: -($base*4);
+		margin-top: baseline(-4);
 		padding-left:1em;
 		position: relative;
 		z-index: 10;
 	}
 }
 
-/* Author Information */
-.byline { /* Author name */
-	font-size: $font14;
+// AUTHOR INFORMATION
+.byline { // Author name
+	@include font-size(14);
 }
 
-/* Company information */
+// COMPANY INFORMATION
 .vcard {
-	font-size: $font14;
-	.org { /* Company name */
+	@include font-size(16);
+	.org { // Company name
 		font-weight: bold;
 	}
-	.adr { /* Company address */
+	.adr { // Company address
 		
 	}
-	.tel { /* Company telephone */
+	.tel { // Company telephone
 	
 	}
 }
-
-

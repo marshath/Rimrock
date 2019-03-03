@@ -1,53 +1,60 @@
-////////////
-// Mixins //
-////////////
+/*
+ *
+ * MIXINS
+ *
+ * Variables: base font-sans, font-serif, radius
+ * Includes: font-size, sans-serif, serif, border-radius, clearfix
+ * Functions: baseline
+ */
 
 
-/* ------------------------------------------------------ */
-/* ------- Depricated - Autoprefixer in CodeKit 2 ------- */
-/* ------------------------------------------------------ */
+/*******************************
+BASELINE
+*******************************/
+@function baseline($base : 1) {
+	@return ($base*$baseline);
+}
 
-// @mixin rotate($rtte) {
-//	-ms-transform:rotate($rtte); /* IE 9 */
-//	-moz-transform:rotate($rtte); /* Firefox */
-//	-webkit-transform:rotate($rtte); /* Safari and Chrome */
-//	-o-transform:rotate($rtte); /* Opera */
-//	transform:rotate($rtte);
-// }
 
-// @mixin scale($scle) {
-//	-ms-transform:scale($scle); /* IE 9 */
-//	-moz-transform:scale($scle); /* Firefox */
-//	-webkit-transform:scale($scle); /* Safari and Chrome */
-//	-o-transform:scale($scle); /* Opera */
-//	transform:scale($scle);
-// }
+/*******************************
+FONT SIZE
+*******************************/
+@mixin font-size($font : 16) {
+	font-size:$font*$font-ems;
+}
 
-// @mixin box-shadow($bshad) {
-//	-ms-box-shadow:($bshad); /* IE 9 */
-//	-moz-box-shadow:($bshad); /* Firefox */
-//	-webkit-box-shadow:($bshad); /* Safari and Chrome */
-//	-o-box-shadow:($bshad); /* Opera */
-//	box-shadow:($bshad);
-// }
 
-// @mixin font-smoothing($fsm) {
-//	-webkit-font-smoothing:($fsm);
-//	-moz-font-smoothing:($fsm);
-//	font-smoothing:($fsm);
-// }	
+/*******************************
+FONT FAMILY
+*******************************/
+@mixin sans-serif {
+	font-family: $font-sans;
+}
 
-// @mixin transition($tone, $ttwo, $tthree) {
-//	-webkit-transition:$tone $ttwo $tthree; 
-//	-moz-transition:$tone $ttwo $tthree; 
-//	-o-transition:$tone $ttwo $tthree; 
-//	transition:$tone $ttwo $tthree;
-// }
+@mixin serif {
+	font-family: $font-serif;
+}
 
-// @mixin blur($blr) {
-//	-webkit-filter: blur($blr);
-//	-moz-filter: blur($blr);
-//	-o-filter: blur($blr);
-//	-ms-filter: blur($blr);
-//	filter: blur($blr);
-// }
+
+/*******************************
+BORDER RADIUS
+*******************************/
+@mixin border-radius($arch : 1) {
+	border-radius:($arch*$radius);
+}
+
+
+/*******************************
+CLEARFIX HACK
+*******************************/
+@mixin clearfix {
+	*zoom:1;
+	&:before,
+	&:after {
+		content:"";
+		display:table;
+	}
+	&:after {
+		clear:both;
+	}
+}

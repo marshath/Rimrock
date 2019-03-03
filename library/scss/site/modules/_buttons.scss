@@ -1,44 +1,48 @@
-/////////////
-// Buttons //
-/////////////
+/*
+ *
+ * BUTTONS
+ *
+ */
 
 
-/* ---------------------- */
-/* ------- Button ------- */
-/* ---------------------- */
-
+/*******************************
+GLOBAL BUTTONS 
+*******************************/
 .btn, .btn-alt, .btn-disabled {
-	color:white;
+	color: white;
 	text-decoration: none;
-	margin: ($base*0.5) 0;
-	padding: ($base*0.5) 1em;
+	margin: baseline(0.5) 0;
+	padding: baseline(0.5) 1em;
 	display: inline-block;
-	@include corner($cornerRadius);
+	@include border-radius(1);
 	&:hover {
 		color:white;
 	}
 }
 
-.btn { /* ------- Standard Button ------- */
-	background: $green;
+// STANDARD BUTTON
+.btn { 
+	background: site-color-alpha('secondary','dark');
 	&:hover {
-		background: lighten($green, 20%);
+		background: site-color-lighten('secondary',2);
 	}
 	&:active {
-		background: lighten($green, 20%);
+		background: site-color-lighten('secondary',2);
 	}
 }
 
-.btn-alt { /* ------- Alternate Button ------- */
-	background: $orange;
+// ALTERNATE BUTTON
+.btn-alt { 
+	background: site-color('primary');
 	&:hover {
-		background-color: darken($orange, 20%);
+		background-color: site-color-lighten('primary',2);
 	}
 }
 
-.btn-disabled { /* ------- Disabled Button ------- */
-	background: $gray;
+// DISABLED BUTTON
+.btn-disabled {
+	background: site-color('foreground');
 	&:hover {
-		background-color: lighten($gray-light, 10);
+		background-color: site-color-lighten('foreground',1);
 	}
 }

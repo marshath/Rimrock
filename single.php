@@ -1,20 +1,15 @@
 <?php get_header(); ?>
 
 			<div id="content">
+				<div id="inner-content" class="wrap">
 
-				<div id="inner-content" class="wrap cf">
-
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<main id="main" class="main-wrap" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<?php
-								/*
-								 * Ah, post formats. Nature's greatest mystery (aside from the sloth).
-								 *
-								 * So this function will bring in the needed template file depending on what the post
+								/* This function will bring in the needed template file depending on what the post
 								 * format is. The different post formats are located in the post-formats folder.
-								 *
 								 *
 								 * REMEMBER TO ALWAYS HAVE A DEFAULT ONE NAMED "format.php" FOR POSTS THAT AREN'T
 								 * A SPECIFIC POST FORMAT.
@@ -29,26 +24,25 @@
 
 						<?php else : ?>
 
-								<article id="post-not-found" class="hentry cf">
-									<header class="article-header">
-										<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-									</header>
-									<section class="entry-content">
-										<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-									</section>
-									<footer class="article-footer">
-											<p><?php _e( 'This is the error message in the single.php template.', 'bonestheme' ); ?></p>
-									</footer>
-								</article>
+							<article id="post-not-found" class="inner-wrap">
+								<header class="article-header">
+									<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
+								</header>
+								<section class="entry-content">
+									<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
+								</section>
+								<footer class="article-footer">
+										<p><?php _e( 'This is the error message in the single.php template.', 'bonestheme' ); ?></p>
+								</footer>
+							</article> <?php // #post-not-found .inner-wrap ?>
 
 						<?php endif; ?>
 
-					</main>
+					</main> <?php // #main .main-wrap ?>
 
 					<?php get_sidebar(); ?>
 
-				</div>
-
-			</div>
+				</div> <?php // end #inner-content .wrap ?>
+			</div> <?php // end #content ?>
 
 <?php get_footer(); ?>

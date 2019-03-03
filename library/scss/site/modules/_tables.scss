@@ -1,44 +1,45 @@
-/////////////
-// Tables //
-/////////////
+/*
+ *
+ * TABLES
+ *
+ */
 
 
-/* ---------------------- */
-/* ------- Button ------- */
-/* ---------------------- */
-
+/*******************************
+GLOBAL TABLE FORMATTING
+*******************************/
 table {
 	width:100%;
 	text-align: left;
 	thead, tfoot {
-		border-top:1px solid $gray;
-		border-left:1px solid $gray-dark;
-		border-right: 1px solid $gray-dark;
+		border-top:1px solid site-color('foreground');
+		border-left:1px solid site-color-darken('foreground',2);
+		border-right: 1px solid site-color-lighten('foreground',2);
 	}
 	thead {
-		background: $gray-dark;
+		background: site-color-lighten('foreground',2);
 		color:white;
 	}
 	tfoot {
-		background: $gray-light;
+		background: site-color-lighten('foreground',1);
 	}
 	tbody {
 		
 	}
 	tr {
-		border-bottom: 1px solid $gray;
+		border-bottom: 1px solid  site-color('foreground');
 		&:nth-child(odd) td {
-			background: $tan;
+			background: site-color('background');
 		}
 		&:nth-child(even) td {
-			background: lighten($tan,5);
+			background: site-color-lighten('background',1);
 		}
 	}
 	td {
-		border-left:1px solid $gray-dark;
-		border-right: 1px solid $gray-dark;
+		border-left:1px solid site-color-darken('foreground',2);
+		border-right: 1px solid site-color-lighten('foreground',2);
 		:nth-child(odd) {
-			background: $tan;
+			background: site-color('background');
 		}
 	}
 }

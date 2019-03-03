@@ -1,10 +1,16 @@
-///////////
-// Links //
-///////////
+/*
+ *
+ * LINKS
+ *
+ */
+ 
 
+/*******************************
+GLOBAL LINKS 
+*******************************/
 a {
-	color: $link;
+	color: site-color('primary');
 	&:hover {
-		color: lighten($link, 20);
+		color: site-color-lighten('primary',2);
 	}
 }

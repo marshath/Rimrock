@@ -63,21 +63,21 @@ var timeToWaitForLast = 100;
  * When the window is resized, we perform this function
  * $(window).resize(function () {
  *
- *    // if we're on the home page, we wait the set amount (in function above) then fire the function
- *    if( is_home ) { waitForFinalEvent( function() {
+ *		// if we're on the home page, we wait the set amount (in function above) then fire the function
+ *		if( is_home ) { waitForFinalEvent( function() {
  *
- *	// update the viewport, in case the window size has changed
- *	viewport = updateViewportDimensions();
+ *			// update the viewport, in case the window size has changed
+ *			viewport = updateViewportDimensions();
  *
- *      // if we're above or equal to 768 fire this off
- *      if( viewport.width >= 768 ) {
- *        console.log('On home page and window sized to 768 width or more.');
- *      } else {
- *        // otherwise, let's do this instead
- *        console.log('Not on home page, or window sized to less than 768.');
- *      }
+ * 			// if we're above or equal to 768 fire this off
+ *			if( viewport.width >= 768 ) {
+ *				console.log('On home page and window sized to 768 width or more.');
+ *			} else {
+ *				// otherwise, let's do this instead
+ *				console.log('Not on home page, or window sized to less than 768.');
+ *			}
  *
- *    }, timeToWaitForLast, "your-function-identifier-string"); }
+ *		}, timeToWaitForLast, "your-function-identifier-string"); }
  * });
  *
  * Pretty cool huh? You can create functions like this to conditionally load
@@ -120,7 +120,7 @@ jQuery(document).ready(function($) {
 	 * This loads the navigation toggle for mobile
 	 */
 	$("#menu-toggle").on("click", function(){
-		$("#nav-menu").slideToggle();
+		$("#menu-header").slideToggle();
 		$(this).toggleClass("active");
 	});
 

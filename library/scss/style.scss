@@ -1,22 +1,17 @@
-/*!
-Theme Name: ATRA-00
-Theme URI: http://www.trailrunner.com
-Description: The American Trail Runner Association's website
-Author URI: http://www.trailrunner.com
-Version: 0.5
-Tags: fluid-layout, responsive-layout, accessibility-ready, translation-ready, microformats, rtl-language-support
-*/
+/*
+ *
+ * IMPORT ALL STYLES - STYLE.CSS
+ *
+ */
 
 
-/* --------------------------- */
-/* ------- Site Styles ------- */
-/* --------------------------- */
-
+/*******************************
+SITE STYLES 
+*******************************/
 @import "site/base";
 
 
-/* ----------------------------- */
-/* ------- Vendor Styles ------- */
-/* ----------------------------- */
-
+/*******************************
+VENDOR STYLES 
+*******************************/
 @import "vendor/flexslider";

@@ -3,7 +3,7 @@
 /* HEADER SOCIAL MEDIA INFORMATION
 /*
 ?>
-	
+
 <?php /* Insert Google Verification */ ?>
 
 <?php /* Insert Bing Verification */ ?>
