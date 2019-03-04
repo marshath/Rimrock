@@ -1,18 +1,5 @@
 			<footer class="footer-wrap" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 				<div id="inner-footer" class="inner-wrap">
-
-					<?php if ( is_active_sidebar( 'footer1' ) ) : ?>
-	
-						<?php dynamic_sidebar( 'footer1' ); ?>
-	
-					<?php else : ?>
-	
-						<?php /* This content shows up if there are no widgets defined in the backend. */ ?>
-						<div class="no-widgets">
-							<p><?php _e( 'This is a widget ready area. Add some and they will appear here.', 'bonestheme' );  ?></p>
-						</div>
-	
-					<?php endif; ?>
 	
 						<nav class="nav-footer" role="navigation">
 							<?php wp_nav_menu(array(
@@ -30,7 +17,7 @@
 							)); ?>
 						</nav>
 	
-						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> Theodore Marshall. All rights reserved.</p>
 
 				</div> <?php // end #inner-footer .inner-wrap ?>
 			</footer> <?php // end .footer-wrap ?>

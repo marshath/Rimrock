@@ -1683,20 +1683,20 @@
 		"oAP": "/page-music.php",
 		"oF": 0
 		},
-	"/page-photo.php": {
+	"/page-photos.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/page-photo.php",
+		"oAP": "/page-photos.php",
 		"oF": 0
 		},
-	"/page-video.php": {
+	"/page-videos.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/page-video.php",
+		"oAP": "/page-videos.php",
 		"oF": 0
 		},
 	"/page.php": {
@@ -1785,6 +1785,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/post-formats/format.php",
+		"oF": 0
+		},
+	"/readme.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/readme.html",
 		"oF": 0
 		},
 	"/readme.md": {
@@ -1897,7 +1905,7 @@
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
-	"alwaysUseExternalServer": 0,
+	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerEnableIEGrid": 0,

@@ -48,7 +48,7 @@
 
 							</footer> <?php // end .article-footer ?>
 
-							<?php comments_template(); ?>
+							<?php // comments_template(); ?>
 
 						</article> <?php // end #post-<id> .article-wrap ?>
 
@@ -70,7 +70,7 @@
 
 					</main> <?php // end #main .main-wrap ?>
 
-					<?php get_sidebar(); ?>
+					<?php // get_sidebar(); ?>
 
 				</div> <?php // end #inner-content .wrap ?>
 			</div> <?php // end #content ?>

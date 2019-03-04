@@ -8,8 +8,12 @@
 /*******************************
 HEADER & FOOTER NAVIGATION 
 *******************************/
-.nav-header, .nav-footer {
+.nav-header {
 	width:100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: center;
@@ -29,12 +33,13 @@ HEADER & FOOTER NAVIGATION
 		flex-grow: 1;
 	}
 	a {
-		color: site_color('secondary');
+		background: rgba(0,0,0,0.85);
+		color: site_color('white');
 		text-decoration: none;
 		padding: baseline(1) 0;
 		display:block;
 		&:hover, &:focus {
-			background: rgba(255,255,255,0.6);
+			background: rgba(56,8,48,1);
 		}
 	}
 }
