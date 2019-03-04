@@ -228,11 +228,33 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/library/images/favicon_16x16.png": {
+		"ft": 32768,
+		"iS": 1370,
+		"oA": 0,
+		"oAP": "/library/images/favicon_16x16.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/library/images/favicon_32.png": {
 		"ft": 32768,
 		"iS": 1742,
 		"oA": 0,
 		"oAP": "/library/images/favicon_32.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/library/images/favicon_32x32.png": {
+		"ft": 32768,
+		"iS": 2236,
+		"oA": 0,
+		"oAP": "/library/images/favicon_32x32.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -331,110 +353,6 @@
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
-		},
-	"/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_all.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_all.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_animations.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_animations.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_baseline.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_baseline.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_colors.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_colors.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_containers.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_containers.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_float.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_float.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_grid.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_grid.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_media-queries.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_media-queries.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_misc.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_misc.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_mixins.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_mixins.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_reset.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_reset.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_variables.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/0092d9e14c3d2a6282b618ce995ddd7ac47892c8/_variables.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/021df024308dfec6fd02089761f4911e3a838de5/style.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/library/scss/.sass-cache/021df024308dfec6fd02089761f4911e3a838de5/style.scssc",
-		"oF": 0
 		},
 	"/library/scss/.sass-cache/1003612673c882315908db7e092240e972d628e1/flexslider.scssc": {
 		"cB": 0,
@@ -644,148 +562,12 @@
 		"oAP": "/library/scss/.sass-cache/21162978bec0f03b86ee5cfc1ea139b46695c140/_typography.scssc",
 		"oF": 0
 		},
-	"/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_all.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_all.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_animations.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_animations.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_buttons.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_buttons.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_colors.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_colors.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_containers.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_containers.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_corner-radius.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_corner-radius.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_footer.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_footer.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_forms.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_forms.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_header.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_header.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_images.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_images.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_links.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_links.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_navigation.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_navigation.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_pages.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_pages.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_sidebars.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_sidebars.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_tables.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_tables.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_typography.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/2b1c94d0f4341bf6cdc4b9658b483ecf56b7ae83/_typography.scssc",
-		"oF": 0
-		},
 	"/library/scss/.sass-cache/452416c31db53201ce9670433c5a3a0e72e60d16/_base.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/library/scss/.sass-cache/452416c31db53201ce9670433c5a3a0e72e60d16/_base.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/4c62103240998b8b916b196864d1e399b6e7869c/_base.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/4c62103240998b8b916b196864d1e399b6e7869c/_base.scssc",
 		"oF": 0
 		},
 	"/library/scss/.sass-cache/63985d6cd4c80c391b2ae402aad0034463e09307/style.scssc": {
@@ -1068,76 +850,12 @@
 		"oAP": "/library/scss/.sass-cache/deff345f676ac6f6ee5ea563e1801290e17822bc/_reset.scssc",
 		"oF": 0
 		},
-	"/library/scss/.sass-cache/eafbf590dac082387367d31575290b9a5426add7/_flexslider.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/library/scss/.sass-cache/eafbf590dac082387367d31575290b9a5426add7/_flexslider.scssc",
-		"oF": 0
-		},
-	"/library/scss/.sass-cache/eafbf590dac082387367d31575290b9a5426add7/flexslider.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/library/scss/.sass-cache/eafbf590dac082387367d31575290b9a5426add7/flexslider.scssc",
-		"oF": 0
-		},
 	"/library/scss/.sass-cache/f070b6dd66fa265a442ee7b339bb37dd8f665c62/_base.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/library/scss/.sass-cache/f070b6dd66fa265a442ee7b339bb37dd8f665c62/_base.scssc",
-		"oF": 0
-		},
-	"/library/scss/admin/.sass-cache/6032b0cfbef4ea4918e26d77cd0bdeec02bf036c/14k.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/library/scss/admin/.sass-cache/6032b0cfbef4ea4918e26d77cd0bdeec02bf036c/14k.scssc",
-		"oF": 0
-		},
-	"/library/scss/admin/.sass-cache/6032b0cfbef4ea4918e26d77cd0bdeec02bf036c/admin.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/library/scss/admin/.sass-cache/6032b0cfbef4ea4918e26d77cd0bdeec02bf036c/admin.scssc",
-		"oF": 0
-		},
-	"/library/scss/admin/.sass-cache/6032b0cfbef4ea4918e26d77cd0bdeec02bf036c/editor-style.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/library/scss/admin/.sass-cache/6032b0cfbef4ea4918e26d77cd0bdeec02bf036c/editor-style.scssc",
-		"oF": 0
-		},
-	"/library/scss/admin/.sass-cache/6032b0cfbef4ea4918e26d77cd0bdeec02bf036c/ie.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/library/scss/admin/.sass-cache/6032b0cfbef4ea4918e26d77cd0bdeec02bf036c/ie.scssc",
-		"oF": 0
-		},
-	"/library/scss/admin/.sass-cache/6032b0cfbef4ea4918e26d77cd0bdeec02bf036c/init_14k.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/library/scss/admin/.sass-cache/6032b0cfbef4ea4918e26d77cd0bdeec02bf036c/init_14k.scssc",
-		"oF": 0
-		},
-	"/library/scss/admin/.sass-cache/6032b0cfbef4ea4918e26d77cd0bdeec02bf036c/login.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/library/scss/admin/.sass-cache/6032b0cfbef4ea4918e26d77cd0bdeec02bf036c/login.scssc",
 		"oF": 0
 		},
 	"/library/scss/admin/14k.scss": {
@@ -1218,14 +936,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/library/scss/site/media/.sass-cache/07116077e74d36925f57ba9c2980c0fe68f56772/print.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/library/scss/site/media/.sass-cache/07116077e74d36925f57ba9c2980c0fe68f56772/print.scssc",
-		"oF": 0
-		},
 	"/library/scss/site/media/_print.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1235,6 +945,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/library/scss/site/media/_print.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/library/scss/site/media/print.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/library/scss/site/media/print.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1252,6 +975,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/library/scss/site/modules/_animations.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/library/scss/site/modules/_animations.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/library/scss/site/modules/_buttons.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1265,6 +1001,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/library/scss/site/modules/_colors.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/library/scss/site/modules/_colors.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/library/scss/site/modules/_containers.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1274,6 +1023,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/library/scss/site/modules/_containers.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/library/scss/site/modules/_corner-radius.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/library/scss/site/modules/_corner-radius.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1434,6 +1196,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/library/scss/site/utilities/_baseline.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/library/scss/site/utilities/_baseline.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/library/scss/site/utilities/_colors.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1443,6 +1218,32 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/library/scss/site/utilities/_colors.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/library/scss/site/utilities/_containers.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/library/scss/site/utilities/_containers.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/library/scss/site/utilities/_float.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/library/scss/site/utilities/_float.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1469,6 +1270,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/library/scss/site/utilities/_media-queries.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/library/scss/site/utilities/_misc.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/library/scss/site/utilities/_misc.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1525,15 +1339,7 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"/library/scss/vendor/.sass-cache/eafbf590dac082387367d31575290b9a5426add7/flexslider.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/library/scss/vendor/.sass-cache/eafbf590dac082387367d31575290b9a5426add7/flexslider.scssc",
-		"oF": 0
-		},
-	"/library/scss/vendor/_flexslider.scss": {
+	"/library/scss/vendor/flexslider.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1541,7 +1347,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/library/scss/vendor/_flexslider.css",
+		"oAP": "/library/scss/vendor/flexslider.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1859,6 +1665,38 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/library/translation/zh_CN.po",
+		"oF": 0
+		},
+	"/page-custom.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-custom.php",
+		"oF": 0
+		},
+	"/page-music.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-music.php",
+		"oF": 0
+		},
+	"/page-photo.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-photo.php",
+		"oF": 0
+		},
+	"/page-video.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-video.php",
 		"oF": 0
 		},
 	"/page.php": {

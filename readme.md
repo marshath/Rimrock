@@ -1,4 +1,4 @@
-# Degrees
+# Rimrock
 A Personally Tailored Wordpress Development Theme
 
 Degrees is designed to make my life as a developer easier. It's built

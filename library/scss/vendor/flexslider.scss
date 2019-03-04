@@ -8,7 +8,6 @@
 	width: 60%;
 	border: 1px solid #999;
 	box-sizing: border-box;
-	margin-bottom: ($base*2);
 	display: inline-block;
 	float: left;
 	@include bp(mobile-h) {
@@ -175,12 +174,10 @@ html[xmlns] .slides {
 
 .flex-control-paging li a:hover { 
 	background: #333; 
-	background: lighten($yellow,30%); 
 }
 
 .flex-control-paging li a.flex-active { 
 	background: #000; 
-	background: $yellow; 
 	cursor: default; 
 }
 
