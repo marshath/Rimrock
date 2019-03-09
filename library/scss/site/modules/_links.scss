@@ -9,7 +9,7 @@
 GLOBAL LINKS 
 *******************************/
 a {
-	color: site-color('accent');
+	color: site-color('secondary');
 	&:hover, &:focus {
 		color: site-color-lighten('primary',2);
 	}
@@ -22,7 +22,7 @@ a {
 	text-decoration: none;
 	color: site-color('gray');
 	&:hover, &:focus {
-		background-color: site-color('accent');
+		background-color: site-color('foreground');
 		color: site-color('white');
 	}
 }

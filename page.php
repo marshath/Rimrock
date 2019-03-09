@@ -123,7 +123,7 @@
 								//-------------------------------
 								if (is_page('photos')) {
 									
-									echo '<div class="">';
+									echo '<div class="photo-wrap">';
 									
 									// check if the repeater field has rows of data
 									if( have_rows('photo') ):
@@ -150,10 +150,62 @@
 									else :
 									    // no rows found
 									endif;
+									echo '<ul class="gallery">
+											<li class="">
+												<figure>
+													<a href="#"><img src="http://via.placeholder.com/400x300"></a>
+												</figure>
+											</li>
+											<li class="">
+												<figure>
+													<a href="#"><img src="http://via.placeholder.com/400x300"></a>
+												</figure>
+											</li>
+											<li class="">
+												<figure>
+													<a href="#"><img src="http://via.placeholder.com/400x300"></a>
+												</figure>
+											</li>
+											<li class="">
+												<figure>
+													<a href="#"><img src="http://via.placeholder.com/400x300"></a>
+												</figure>
+											</li>
+											<li class="">
+												<figure>
+													<a href="#"><img src="http://via.placeholder.com/400x300"></a>
+												</figure>
+											</li>
+											<li class="">
+												<figure>
+													<a href="#"><img src="http://via.placeholder.com/400x300"></a>
+												</figure>
+											</li>
+											<li class="">
+												<figure>
+													<a href="#"><img src="http://via.placeholder.com/400x300"></a>
+												</figure>
+											</li>
+											<li class="">
+												<figure>
+													<a href="#"><img src="http://via.placeholder.com/400x300"></a>
+												</figure>
+											</li>
+											<li class="">
+												<figure>
+													<a href="#"><img src="http://via.placeholder.com/400x300"></a>
+												</figure>
+											</li>
+											<li class="">
+												<figure>
+													<a href="#"><img src="http://via.placeholder.com/400x300"></a>
+												</figure>
+											</li>
+										</ul>';
 									
-								echo '</div>';
+									echo '</div>';
 								
-								} // end photos ?>							
+								} // end photos ?>	
 
 							</section> <?php // end .content-entry ?>
 
