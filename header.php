@@ -24,8 +24,8 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<?php // header includes
-			get_template_part('inc/header-social'); // includes social media profiles 
-			get_template_part('inc/header-plugins'); // includes plugins and analytics ?>
+			// get_template_part('inc/header-social'); // includes social media profiles 
+			// get_template_part('inc/header-plugins'); // includes plugins and analytics ?>
 
 		<?php // wordpress head functions
 			wp_head(); // end of wordpress head ?>
@@ -48,7 +48,7 @@
 					<nav class="nav-header" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						
 						<?php // mobile menu toggle ?>
-						<h3 id="menu-toggle"><a href="#"><span class="menu-icon" aria-hidden="true" data-icon="&#xe000;"></span> <span class="menu-text">Menu</span></a></h3>
+						<h3 id="menu-toggle" class="menu-toggle-btn"><a href="#"><span class="menu-icon" aria-hidden="true" data-icon="&#xe000;"></span> <span class="menu-text">Menu</span></a></h3>
 						
 						<?php // menu items ?>
 						<div id="nav-menu">

@@ -1222,19 +1222,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/library/scss/site/utilities/_containers.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/library/scss/site/utilities/_containers.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"/library/scss/site/utilities/_float.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1675,28 +1662,12 @@
 		"oAP": "/page-custom.php",
 		"oF": 0
 		},
-	"/page-music.php": {
+	"/page-home.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/page-music.php",
-		"oF": 0
-		},
-	"/page-photos.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/page-photos.php",
-		"oF": 0
-		},
-	"/page-videos.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/page-videos.php",
+		"oAP": "/page-home.php",
 		"oF": 0
 		},
 	"/page.php": {

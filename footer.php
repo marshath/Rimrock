@@ -17,6 +17,7 @@
 							)); ?>
 						</nav>
 	
+						<div class="">D Major Records</div>
 						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> Theodore Marshall. All rights reserved.</p>
 
 				</div> <?php // end #inner-footer .inner-wrap ?>

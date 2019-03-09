@@ -9,8 +9,20 @@
 GLOBAL LINKS 
 *******************************/
 a {
-	color: site-color('primary');
-	&:hover {
+	color: site-color('accent');
+	&:hover, &:focus {
 		color: site-color-lighten('primary',2);
+	}
+}
+
+.btn {					// download album buttons
+	padding: 0.5em 1em;
+	margin-right: 0.25em;				// spacing right
+	background-color: site-color('primary');
+	text-decoration: none;
+	color: site-color('gray');
+	&:hover, &:focus {
+		background-color: site-color('accent');
+		color: site-color('white');
 	}
 }

@@ -10,45 +10,152 @@
 						<article id="post-<?php the_ID(); ?>" <?php post_class( 'inner-wrap' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 							<header class="article-header">
-
 								<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
-								<p class="byline vcard">
-									<?php printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-								</p>
-
 							</header> <?php // end .article header ?>
 
 							<section class="entry-content" itemprop="articleBody">
-								<?php
-									// the content (pretty self explanatory huh)
+								<?php 
+									// the content
 									the_content();
-
-									/*
-									 * Link Pages is used in case you have posts that are set to break into
-									 * multiple pages. You can remove this if you don't plan on doing that.
-									 *
-									 * Also, breaking content up into multiple pages is a horrible experience,
-									 * so don't do it. While there are SOME edge cases where this is useful, it's
-									 * mostly used for people to get more ad views. It's up to you but if you want
-									 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
-									 *
-									 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
-									 *
-									*/
-									wp_link_pages( array(
-										'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
-										'after'       => '</div>',
-										'link_before' => '<span>',
-										'link_after'  => '</span>',
-									) );
 								?>
+								
+								<?php 
+								//------------------------------
+								// ----------- MUSIC -----------
+								//------------------------------
+								if (is_page('music')) {
+									
+									echo '<div class="">';
+									
+									// check if the repeater field has rows of data
+									if( have_rows('album') ):
+									
+									 	// loop through the rows of data
+									    while ( have_rows('album') ) : the_row();
+									
+									        // display albums
+											echo '<div class="album-wrap">
+											
+												<div class="album-cover">
+													<figure><img src="', the_sub_field('album_cover'), '" alt=""></figure>
+												</div>
+												
+												<div class="album-info">
+													
+													<h3 class="album-title">', the_sub_field('album_title'), '</h3>
+													
+													<div class="album-details">
+													
+														<div class="album-subdetails">
+															<span class="album-year">', the_sub_field('album_year'), '</span> 
+															• 
+															<span class="album-dmr">dmr0', the_sub_field('dmr_age'), '</span>
+														</div>
+														
+														<div class="album-buttons">
+															<div class="album-download">Download: </div>
+															<a href="', the_sub_field('download_itunes'), '" class="btn">iTunes</a>
+															<a href="', the_sub_field('download_mp3'), '" class="btn">MP3</a>
+														</div>
+														
+													</div>
+													
+													<ol class="album-tracks">
+															', the_sub_field('track_list'), '
+													</ol>
+													
+												</div>
+												
+											</div>'; // album wrap
+									        
+									    endwhile;
+									
+									else :
+									    // no rows found
+									endif;
+									
+								echo '</div>';
+								
+								} // end music ?>
+								
+								<?php 
+								//-------------------------------
+								// ----------- VIDEOS -----------
+								//-------------------------------
+								if (is_page('videos')) {
+									
+									echo '<div class="">';
+									
+									// check if the repeater field has rows of data
+									if( have_rows('video') ):
+									
+									 	// loop through the rows of data
+									    while ( have_rows('video') ) : the_row();
+									
+									        // display videos
+									        
+											echo '<div class="">
+												<div class="">
+							
+													<div class=""><img src="', the_sub_field('video_image'), '" style="width:100px;"></div>
+													<h3 class="">', the_sub_field('video_title'), '</h3>
+													<div class="">', the_sub_field('video_year'), '</div>
+													<div class="">', the_sub_field('video_duration'), '</div>
+													<div class="">', the_sub_field('video_tags'), '</div>
+													<div class="">', the_sub_field('videographer'), '</div>
+												
+												</div>
+											</div>';
+									        
+									    endwhile;
+									
+									else :
+									    // no rows found
+									endif;
+									
+								echo '</div>';
+								
+								} // end videos ?>
+								
+								<?php 
+								//-------------------------------
+								// ----------- PHOTOS -----------
+								//-------------------------------
+								if (is_page('photos')) {
+									
+									echo '<div class="">';
+									
+									// check if the repeater field has rows of data
+									if( have_rows('photo') ):
+									
+									 	// loop through the rows of data
+									    while ( have_rows('photo') ) : the_row();
+									
+									        // display photos
+									        
+											echo '<div class="">
+												<div class="">
+							
+													<div class="">', the_sub_field('photo_image'), '</div>
+													<h3 class="">', the_sub_field('photo_title'), '</h3>
+													<div class="">', the_sub_field('photo_year'), '</div>
+													<div class="">', the_sub_field('photo_tags'), '</div>
+													<div class="">', the_sub_field('photographer'), '</div>
+												
+												</div>
+											</div>';
+									        
+									    endwhile;
+									
+									else :
+									    // no rows found
+									endif;
+									
+								echo '</div>';
+								
+								} // end photos ?>							
+
 							</section> <?php // end .content-entry ?>
-
-							<footer class="article-footer">
-
-							</footer> <?php // end .article-footer ?>
-
-							<?php // comments_template(); ?>
 
 						</article> <?php // end #post-<id> .inner-wrap ?>
 
@@ -69,8 +176,6 @@
 						<?php endif; ?>
 
 					</main> <?php // end #main .main-wrap ?>
-
-					<?php //get_sidebar(); ?>
 
 				</div> <?php // end #inner-content .wrap ?>
 			</div> <?php // end #content ?>

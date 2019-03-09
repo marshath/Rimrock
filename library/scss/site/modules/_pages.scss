@@ -6,62 +6,114 @@
 
 
 /*******************************
-BLOG
+Music
 *******************************/
-// BLOG ARCHIVE LIST
-.block-thumb {
-	.b-inner {
-		@include clearfix;
-	}
-	.b-thumb {
-		@include column(3);
-	}
-	.b-text {
-		@include column(9);
-	}
-	.b-title {
-		
-	}
-}
 
-.block-headline {
-	text-decoration: none;
-}
-
-.block-hero {
-	.b-thumb {
-		@include column(12);
-	}
-}
-
-.block-inset {
-	.b-thumb {
-		
-	}
-	.b-text {
-		background: black;
-		margin-top: baseline(-4);
-		padding-left:1em;
-		position: relative;
-		z-index: 10;
-	}
-}
-
-// AUTHOR INFORMATION
-.byline { // Author name
-	@include font-size(14);
-}
-
-// COMPANY INFORMATION
-.vcard {
-	@include font-size(16);
-	.org { // Company name
-		font-weight: bold;
-	}
-	.adr { // Company address
-		
-	}
-	.tel { // Company telephone
+.album {
 	
+	&-wrap {
+		display: flex;
+		flex-flow: column nowrap;
+		margin-bottom: baseline(2);		// vertical spacing between albums
+		perspective: 600px;				// set perspective for album-cover transform
+		&:hover .album-cover {
+		transform-style: preserve-3d;
+		transform: rotateY(10deg) translateX(10px);
+		}
+	}
+	&-cover {
+		width: 100%;
+		margin-bottom: baseline(0.5);			// push text down on mobile
+		transition: all 0.5s ease;			// sizing animation
+	}
+	&-info {								// subdetails, buttons, tracks
+	}
+	&-title {
+		margin: 0;							// remove h3 margin
+	}
+	&-details {								// subdetails, buttons
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: space-between;			// push to the sides
+		border-bottom: 1px solid white;
+	}
+	&-subdetails {							// year & dmr spans
+	}
+	&-year {
+	}
+	&-dmr {
+		text-transform: uppercase;
+	}
+	&-buttons {
+	}
+	&-download {
+		display: inline-block;
+		color: site-color('gray');
+		margin-right: 0.5em;			// push buttons right
+	}
+	&-tracks {
+		column-count: 1;
+		column-gap: 1em;
+	}
+	@include bp('tablet-v') {		//------- Tablet Vertical -------//
+		&-wrap {
+			flex-flow: row nowrap;
+		}
+		&-cover {
+			width: 30%;
+			max-width: 350px;
+			margin-right: 5%;
+		}
+		&-info {								// subdetails, buttons, tracks
+			width: 65%;							// 100% - 30% width + 5% margin-right
+		}
+		&-title {
+		}
+		&-details {								// subdetails & buttons
+			flex-flow: row nowrap;
+			justify-content: space-between;			// push to the sides
+		}
+		&-subdetails {							// year & dmr spans
+		}
+		&-year {
+		}
+		&-dmr {
+		}
+		&-buttons {
+		}
+		&-download {
+		}
+		&-tracks {
+			column-count: 2;
+			column-gap: 1em;
+		}
+	}
+	@include bp('laptop') {		//------- Laptop -------//
+		&-wrap {
+			max-width: 1600px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&-cover {
+		}
+		&-info {								// subdetails, buttons, tracks
+		}
+		&-title {
+		}
+		&-details {								// subdetails & buttons
+		}
+		&-subdetails {							// year & dmr spans
+		}
+		&-year {
+		}
+		&-dmr {
+		}
+		&-buttons {
+		}
+		&-download {
+		}
+		&-tracks {
+			column-count: 3;
+		}
 	}
 }

@@ -10,12 +10,12 @@ HEADER & FOOTER NAVIGATION
 *******************************/
 .nav-header {
 	width:100%;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 10;
 	display: flex;
-	flex-flow: column wrap;
+	flex-flow: column wrap;			// stack website name and navigation
 	justify-content: center;
 	ul {
 		margin: 0;
@@ -24,7 +24,7 @@ HEADER & FOOTER NAVIGATION
 		text-align: center;
 		list-style: none;
 		display: flex;
-		flex-flow: column wrap;
+		flex-flow: column wrap;			// stack navigation menu
 		justify-content: space-around;
 		align-content: space-around;
 	}
@@ -33,30 +33,37 @@ HEADER & FOOTER NAVIGATION
 		flex-grow: 1;
 	}
 	a {
-		background: rgba(0,0,0,0.85);
-		color: site_color('white');
+		background-color: rgba(0,0,0,0.85);
+		color: site-color('white');
 		text-decoration: none;
 		padding: baseline(1) 0;
-		display:block;
+		display: block;
 		&:hover, &:focus {
-			background: rgba(56,8,48,1);
+			background-color: rgba(56,8,48,0.5);
+			color: site-color('accent');
 		}
 	}
 }
-
+li.current-menu-item a {
+	background-color: site-color('primary') !important;
+}
+	
 .nav-header {
 	h3 { // is the 'menu-toggle'
 		text-align: center;
+		margin: 0;			// remove margin from h3
 	}
 	ul {
 		display: none; // hides the navigation, until the 'menu-toggle' is clicked
 	}
 	li {
+		width: 100%;		// make full width
 	}
 	a {
 	}
 	.active ul {
 		display: flex; // shows the navigation, when the 'menu-toggle' is clicked
+		flex-flow: column nowrap;
 	}
 	@include bp('tablet-v') {
 		ul {
@@ -66,143 +73,6 @@ HEADER & FOOTER NAVIGATION
 		li {
 			width: auto; // reduces the width from 100%;
 		}
-	}
-}
-
-.nav-footer {
-	ul {
-	}
-	li {
-	}
-	a {
-	}
-	@include bp('tablet-v') {
-		ul {
-			flex-flow: row wrap; // format as a row
-		}
-		li {
-			width: auto; // reduces the width from 100%;
-		}
-	}
-}
-
-
-/*******************************
-BREADCRUMB TRAIL 
-*******************************/
-.breadcrumbs {
-	list-style: none;
-	margin-top:0;
-	padding-left:0;
-	@include clearfix;
-	li {
-		float:left;
-		&:before {
-			content:' > ';
-			color: site-color('primary');
-		}
-		a {
-			text-decoration: none;
-			&:hover {
-				color: alert-color('error');
-			}
-		}
-	}
-}
-
-
-/*******************************
-PAGINATION
-*******************************/
-.pagination {
-	list-style: none;
-	margin-top:0;
-	padding-left:0;
-	@include clearfix;
-	li {
-		float: left;
-		margin: 1em 0;
-		border-right: 1px solid site-color('foreground');
-		&:last-child {
-			border-right: none;
-		}
-		a {
-			width: 100%;
-			height: 100%;
-			color: site-color('primary');
-			text-decoration: none;
-			padding:  baseline(1) 1.5em;
-			display: inline-block;
-			&:hover {
-				background: site-color('background');
-			}
-		}
-	}
-}
-
-
-/*******************************
-TABS
-*******************************/
-.tabs, .accordion {
-	@include clearfix;
-	ul {
-		margin-top:0;
-		padding-left: 0;
-	}
-	li {
-		@include column(4);
-		text-align: center;
-		float: left;
-		a {
-			width: 100%;
-			height: 100%;
-			background: site-color('primary');
-			color:white;
-			text-decoration: none;
-			padding:  baseline(1) 1.5em;
-			display: inline-block;
-			&:hover {
-				background: site-color-lighten('primary',2);
-			}
-		}
-	}
-}
-.accordion li {
-	@include column(12);
-	text-align: left;
-	position: relative;
-	&:after {
-		content: '+';
-		color: white;
-		position: absolute;
-		right: 1em;
-		top:1em;
-	}
-}
-
-
-/*******************************
-SINGLE COMMENT 
-*******************************/
-.comment-container {
-	list-style: none;
-	@include clearfix;
-	.comment-meta {
-		@include column(2);
-		float: left;
-		a {
-			color: black;
-			text-decoration: none;
-			&:hover {
-				color: site-color('primary');
-			}
-		}
-	}
-	.comment-text {
-		@include column(10);
-		display: inline-block;
-		float: right;
 	}
 }
 

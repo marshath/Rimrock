@@ -8,41 +8,17 @@
 /*******************************
 GLOBAL BUTTONS 
 *******************************/
-.btn, .btn-alt, .btn-disabled {
-	color: white;
-	text-decoration: none;
-	margin: baseline(0.5) 0;
-	padding: baseline(0.5) 1em;
-	display: inline-block;
-	@include border-radius(1);
-	&:hover {
-		color:white;
-	}
+.btn, .btn-alt, .btn-disabled {		// remove browser default styles
 }
 
 // STANDARD BUTTON
 .btn { 
-	background: site-color-alpha('secondary','dark');
-	&:hover {
-		background: site-color-lighten('secondary',2);
-	}
-	&:active {
-		background: site-color-lighten('secondary',2);
-	}
 }
 
 // ALTERNATE BUTTON
 .btn-alt { 
-	background: site-color('primary');
-	&:hover {
-		background-color: site-color-lighten('primary',2);
-	}
 }
 
 // DISABLED BUTTON
 .btn-disabled {
-	background: site-color('foreground');
-	&:hover {
-		background-color: site-color-lighten('foreground',1);
-	}
 }

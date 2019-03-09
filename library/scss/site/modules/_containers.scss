@@ -19,17 +19,6 @@ BACKGROUND WRAPS
 	width:100%;
 	display:block;
 }
-.page-wrap {
-}
-
-.header-wrap,
-.main-wrap,
-.footer-wrap {
-}
-
-.inner-wrap,
-.sidebar {
-}
 
 
 /*******************************
@@ -45,21 +34,6 @@ MAIN
 *******************************/
 .main-wrap {
 	position: relative;			// set for z-index above site name
-	z-index: 5;
-	margin: auto 4em;
+	z-index: 5;					// position between site name and navigation
+	margin: auto 10%;			// side and top spacing
 }
-
-
-/*******************************
-SIDEBAR 
-*******************************/
-.sidebar {
-}
-
-
-/*******************************
-FOOTER 
-*******************************/
-.footer-wrap {
-}
-
