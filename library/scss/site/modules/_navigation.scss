@@ -42,7 +42,7 @@ HEADER & FOOTER NAVIGATION
 		padding: baseline(1) 0;
 		display: block;
 		&:hover, &:focus {
-			background-color: rgba(56,8,48,0.65);
+			background-color: rgba(56,8,48,0.5);
 			color: site-color('white') !important;
 		}
 		&:active {

@@ -9,7 +9,6 @@
 HEADER
 *******************************/
 
-
 #menu-toggle { // toggles the menu visibity for mobile
 	display: block;
 	@include bp('tablet-v') {

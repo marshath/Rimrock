@@ -15,7 +15,8 @@ a {
 	}
 }
 
-.btn {					// download album buttons
+// ALBUM DOWNLOADS //
+.btn {
 	padding: 0.5em 1em;
 	margin-right: 0.25em;				// spacing right
 	background-color: site-color('primary');
@@ -24,5 +25,32 @@ a {
 	&:hover, &:focus {
 		background-color: site-color('foreground');
 		color: site-color('white');
+	}
+}
+
+// MUSIC LINKS //
+.album-tracks a {
+	text-decoration: none;
+	border-bottom: 2px solid site-color('accent');
+	&:hover, &:focus {
+		color: site-color('accent');
+	}
+}
+
+// VIDEO LINKS //
+.video a {
+	display: block;
+	text-decoration: none;
+	h3 {
+		color: site-color('secondary');
+		border-bottom: 2px solid site-color('accent');
+	}
+	&:hover, &:focus {
+		h3 {
+			color: site-color('accent');
+		}
+		img {
+			transform: scale(1.05) translateY(-2.25%);
+		}
 	}
 }

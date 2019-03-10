@@ -46,11 +46,6 @@ Music
 		text-transform: uppercase;
 	}
 	&-buttons {
-		a {
-			&:hover {
-				//background-color: (129, 17, 103, 0.25);
-			}
-		}
 	}
 	&-download {
 		display: inline-block;
@@ -60,13 +55,6 @@ Music
 	&-tracks {
 		column-count: 1;
 		column-gap: 1em;
-		a {
-			text-decoration: none;
-			border-bottom: 2px solid site-color('accent');
-			&:hover {
-				color: site-color('accent');
-			}
-		}
 	}
 	@include bp('tablet-v') {		//------- Tablet Vertical -------//
 		&-wrap {
@@ -133,6 +121,51 @@ Music
 
 
 /*******************************
+Videos
+*******************************/
+
+.video {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	&-wrap {
+		flex-basis: 100%;
+		margin-bottom: baseline(2);				// push videos down for bottom spacing
+	}
+	&-cover {
+	}
+	&-info {
+	}
+	&-title {
+		margin: 0;					// remove h3 margin
+	}
+	&-details {
+		color: site-color('gray');
+	}
+	&-year {
+	}
+	&-duration {
+	}
+	@include bp('tablet-v') {		//------- Tablet Vertical and up -------//
+		flex-flow: row wrap;
+		&-wrap {
+			flex-basis: 45%;
+		}
+	}
+	@include bp('tablet-h') {		//------- Tablet Horizontal and up -------//
+		&-wrap {
+			flex-basis: 30%;
+		}
+	}
+	@include bp('television') {		//------- Television and up -------//
+		&-wrap {
+			flex-basis: 22%;
+		}
+	}
+}
+
+
+/*******************************
 Photos
 *******************************/
 
@@ -140,7 +173,7 @@ Photos
 }
 .gallery {
 	display: grid;
-	grid-auto-rows: 20%;
+	grid-auto-rows: 12%;
 	grid-gap: 1rem;
 	grid-auto-flow: dense;
 	list-style: none;
@@ -157,6 +190,12 @@ Photos
 		margin: 0;
 		height: 100%;
 		width: 100%;
+	}
+	a {
+		
+		&:hover img, &:focus {
+			transform: scale(1.05);
+		}
 	}
 	@include bp('phone-h') {		//------- phone horizontal and up -------//
 		li:nth-child(4n) {				// include every 4th photo

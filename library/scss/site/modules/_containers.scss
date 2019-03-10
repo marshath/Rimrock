@@ -7,7 +7,7 @@
 
 body {
 	width: 100%; // sets width for grid columns
-	background: linear-gradient(to bottom, #000000 0%, #380830 100%) fixed;
+	background: linear-gradient(to bottom, #240020 0%, #000000 20%, #000000 50%, #380830 100%) fixed;
 }
 
 
@@ -24,9 +24,6 @@ BACKGROUND WRAPS
 /*******************************
 HEADER
 *******************************/
-.header-wrap {
-	background: linear-gradient(to bottom, #000000 0%, #380830 100%);
-}
 
 
 /*******************************

@@ -25,7 +25,7 @@
 								//------------------------------
 								if (is_page('music')) {
 									
-									echo '<div class="">';
+									echo '<div class="album">';
 									
 									// check if the repeater field has rows of data
 									if( have_rows('album') ):
@@ -84,7 +84,7 @@
 								//-------------------------------
 								if (is_page('videos')) {
 									
-									echo '<div class="">';
+									echo '<div class="video">';
 									
 									// check if the repeater field has rows of data
 									if( have_rows('video') ):
@@ -94,17 +94,24 @@
 									
 									        // display videos
 									        
-											echo '<div class="">
-												<div class="">
-							
-													<div class=""><img src="', the_sub_field('video_image'), '" style="width:100px;"></div>
-													<h3 class="">', the_sub_field('video_title'), '</h3>
-													<div class="">', the_sub_field('video_year'), '</div>
-													<div class="">', the_sub_field('video_duration'), '</div>
-													<div class="">', the_sub_field('video_tags'), '</div>
-													<div class="">', the_sub_field('videographer'), '</div>
-												
-												</div>
+											echo '<div class="video-wrap">
+												<a href="video-link">
+											
+													<div class="video-cover">
+														<figure><img src="', the_sub_field('video_image'), '" alt=""></figure>
+														</figure>
+													</div>
+													
+													<div class="video-info">
+													
+														<h3 class="video-title">', the_sub_field('video_title'), '</h3>
+														
+														<div class="video-details">
+															<span class="video-year">', the_sub_field('video_year'), '</span> • <span class="video-duration">', the_sub_field('video_duration'), '</span>
+														</div>
+													
+													</div>
+												</a>
 											</div>';
 									        
 									    endwhile;
