@@ -10,29 +10,9 @@
 
 
 /*******************************
-FADE 
+SPLASH SPIN
 *******************************/
-.fade {
-	opacity: 1;
-	transition: opacity .3s ease-out;
-	&:hover {
-		opacity: 0;
-	}
-}
-
-
-/*******************************
-MOVEMENT
-*******************************/
-.move {
-	opacity: 1;
-	&:hover {
-		animation : scrollBanner 0.8s ease-in-out infinite;
-	}
-}
-
-@keyframes scrollBanner {
-	from { transform : translateX(0) }
-	97%  { transform : translateX(80%) }
-	to   { transform : translateX(0%) }
+@keyframes spinner {
+	from { transform : rotateZ(0deg) }
+	to   { transform : rotateZ(360deg) }
 }

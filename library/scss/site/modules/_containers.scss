@@ -8,6 +8,13 @@
 body {
 	width: 100%; // sets width for grid columns
 	background: linear-gradient(to bottom, #240020 0%, #000000 20%, #000000 50%, #380830 100%) fixed;
+	@include sans-serif;
+	color: site-color('text');
+	line-height: baseline(1);
+	margin-top: baseline(8);
+	&.home {
+		margin-top: baseline(2.25);			// push splash image under navigation
+	}
 }
 
 
@@ -29,8 +36,13 @@ HEADER
 /*******************************
 MAIN 
 *******************************/
-.main-wrap {
+.main-wrap, 
+.home-wrap {
 	position: relative;			// set for z-index above site name
 	z-index: 5;					// position between site name and navigation
+}
+.home-wrap {
+}
+.main-wrap {
 	margin: auto 10%;			// side and top spacing
 }

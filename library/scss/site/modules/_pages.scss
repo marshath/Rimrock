@@ -6,6 +6,121 @@
 
 
 /*******************************
+Home page
+*******************************/
+.home-wrap {
+	h1 {
+		display: none;		// hide the title
+	}
+}
+
+.splash {
+	background-image: url('http://localhost:5757/neutrondawn.com/library/images/splash_hero.jpg');			// tounge image
+	background-position: center center;
+	background-size: cover;
+	height: 100vw; 
+	max-height: 80vh;
+	text-align: center;
+	&-band, &-album {
+		display: block;							// set full width
+		background-position: center center;
+		background-size: contain;
+		color: rgba(255,255,255,0);				// remove text
+	}
+	&-band {
+		background-image: url('http://localhost:5757/neutrondawn.com/library/images/splash_band.png');			// tounge image
+		height: 25vw;			// sets background image to scale full width
+		max-height: 30vh;		// stop scaling up
+	}
+	&-album {
+		display: block;
+		position: absolute;
+		top: 90vw;				// 100 - 10 hieght = 90
+		left: 0;
+		background-image: url('http://localhost:5757/neutrondawn.com/library/images/splash_album.png');			// tounge image
+		width: 100%;
+		height: 7vw;			// sets background image to scale full width
+		max-height: 7vh;		// stop scaling up
+	}
+	&-cta {
+		display: block;
+		position: relative;				// set for z-index
+		font-style: italic;
+		margin-top: 15vw;
+		z-index: 7;						// position above spiral
+	}
+	&-spiral {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw; 				// set width required
+		height: 100vw; 				// set height required
+		max-height: 80vh;
+		opacity: 1;
+		overflow: hidden;
+		img {
+			width: 180vw;
+			height: 180vw;
+			margin: -40vw 0 0 -40vw;					// center spiral = (180 - 100) / 2
+			animation: spinner 8s linear infinite;		// 360 degree spin
+			mix-blend-mode: overlay;					// SVG overlay for cool color effect
+		}
+	}
+	@include bp('laptop') {		//------- Laptop and up -------//
+		&-band {
+		}
+		&-album {
+			top: 70vh;				// 100 - 10 hieght = 90
+		}
+		&-cta {
+			margin-top: baseline(2.5);				// fixed top spacing to center
+			font-size: 1.5em;						// enlarge font size for larger screens
+		}
+		&-spiral {
+			img {
+				margin: -50vw 0 0 -40vw;			// vertical adjustment
+			}
+		}
+	}
+	@include bp('television') {		//------- Television and up -------//
+		&-band {
+		}
+		&-album {
+		}
+		&-cta {
+			margin-top: baseline(1);				// fixed top spacing to center
+		}
+		&-spiral {
+			img {
+				margin: -65vw 0 0 -40vw;			// vertical adjustment
+			}
+		}
+	}
+}
+
+.btn-cta {
+	width: 12em;
+	margin: baseline(0.5) auto 0 auto;
+	a {
+		display: block;
+		background-color: rgba(255,255,255,0.75);
+		padding: baseline(0.5) 1em;
+		color: site-color('primary');
+		text-decoration: none;
+		font-weight: bold;
+		font-style: normal;
+		border: 1px solid site-color('text');
+		&:hover {
+			background-color: rgba(255,255,255,1);
+			color: site-color('accent');
+			border-color: site-color('accent');
+		}
+	}
+}
+
+
+/*******************************
 Music
 *******************************/
 
@@ -46,6 +161,9 @@ Music
 		text-transform: uppercase;
 	}
 	&-buttons {
+		&:hover .btn {						// lighten button text
+			color: #999;
+		}
 	}
 	&-download {
 		display: inline-block;
@@ -128,9 +246,15 @@ Videos
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-between;
+	&:hover .video-cover {
+		opacity: 0.8;
+	}
 	&-wrap {
 		flex-basis: 100%;
 		margin-bottom: baseline(2);				// push videos down for bottom spacing
+		&:hover .video-cover {
+			opacity: 1;
+		}
 	}
 	&-cover {
 	}
@@ -179,23 +303,23 @@ Photos
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	&:hover figure {
+		opacity: 0.83;				// darken images on hover
+	}
 	img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 	}
 	li {
+		&:hover figure {
+			opacity: 1;
+		}
 	}
 	figure {
 		margin: 0;
 		height: 100%;
 		width: 100%;
-	}
-	a {
-		
-		&:hover img, &:focus {
-			transform: scale(1.05);
-		}
 	}
 	@include bp('phone-h') {		//------- phone horizontal and up -------//
 		li:nth-child(4n) {				// include every 4th photo

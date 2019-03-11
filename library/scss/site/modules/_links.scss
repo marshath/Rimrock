@@ -24,7 +24,7 @@ a {
 	color: site-color('gray');
 	&:hover, &:focus {
 		background-color: site-color('foreground');
-		color: site-color('white');
+		color: site-color('white') !important;				// override .album-buttons from _pages	
 	}
 }
 
@@ -52,5 +52,12 @@ a {
 		img {
 			transform: scale(1.05) translateY(-2.25%);
 		}
+	}
+}
+
+// PHOTO LINKS //
+.gallery a {
+	&:hover img, &:focus {
+		transform: scale(1.05);
 	}
 }

@@ -107,7 +107,7 @@
 														<h3 class="video-title">', the_sub_field('video_title'), '</h3>
 														
 														<div class="video-details">
-															<span class="video-year">', the_sub_field('video_year'), '</span> • <span class="video-duration">', the_sub_field('video_duration'), '</span>
+															<span class="video-year">', the_sub_field('video_year'), '</span> • <span class="video-duration">', the_sub_field('video_duration'), ' min</span>
 														</div>
 													
 													</div>
@@ -132,83 +132,21 @@
 									
 									echo '<div class="photo-wrap">';
 									
-									// check if the repeater field has rows of data
-									if( have_rows('photo') ):
-									
-									 	// loop through the rows of data
-									    while ( have_rows('photo') ) : the_row();
-									
-									        // display photos
-									        
-											echo '<div class="">
-												<div class="">
-							
-													<div class="">', the_sub_field('photo_image'), '</div>
-													<h3 class="">', the_sub_field('photo_title'), '</h3>
-													<div class="">', the_sub_field('photo_year'), '</div>
-													<div class="">', the_sub_field('photo_tags'), '</div>
-													<div class="">', the_sub_field('photographer'), '</div>
-												
-												</div>
-											</div>';
-									        
-									    endwhile;
-									
-									else :
-									    // no rows found
-									endif;
-									echo '<ul class="gallery">
-											<li class="">
-												<figure>
-													<a href="#"><img src="http://via.placeholder.com/400x300"></a>
-												</figure>
-											</li>
-											<li class="">
-												<figure>
-													<a href="#"><img src="http://via.placeholder.com/400x300"></a>
-												</figure>
-											</li>
-											<li class="">
-												<figure>
-													<a href="#"><img src="http://via.placeholder.com/400x300"></a>
-												</figure>
-											</li>
-											<li class="">
-												<figure>
-													<a href="#"><img src="http://via.placeholder.com/400x300"></a>
-												</figure>
-											</li>
-											<li class="">
-												<figure>
-													<a href="#"><img src="http://via.placeholder.com/400x300"></a>
-												</figure>
-											</li>
-											<li class="">
-												<figure>
-													<a href="#"><img src="http://via.placeholder.com/400x300"></a>
-												</figure>
-											</li>
-											<li class="">
-												<figure>
-													<a href="#"><img src="http://via.placeholder.com/400x300"></a>
-												</figure>
-											</li>
-											<li class="">
-												<figure>
-													<a href="#"><img src="http://via.placeholder.com/400x300"></a>
-												</figure>
-											</li>
-											<li class="">
-												<figure>
-													<a href="#"><img src="http://via.placeholder.com/400x300"></a>
-												</figure>
-											</li>
-											<li class="">
-												<figure>
-													<a href="#"><img src="http://via.placeholder.com/400x300"></a>
-												</figure>
-											</li>
-										</ul>';
+									$images = get_field('photo_gallery');
+
+									if( $images ): ?>
+									    <ul class="gallery">
+									        <?php foreach( $images as $image ): ?>
+									            <li>
+									                <figure>
+									                	<a href="<?php echo $image['url']; ?>">
+										                    <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; echo '. '; echo $image['caption'] ?>" />
+										                </a>
+									                </figure>
+									            </li>
+									        <?php endforeach; ?>
+									    </ul>
+									<?php endif;
 									
 									echo '</div>';
 								

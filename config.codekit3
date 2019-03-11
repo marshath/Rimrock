@@ -975,19 +975,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/library/scss/site/modules/_animations.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/library/scss/site/modules/_animations.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"/library/scss/site/modules/_buttons.scss": {
 		"aP": 0,
 		"bl": 0,

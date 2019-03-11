@@ -9,12 +9,6 @@
 /*******************************
 BODY TEXT
 *******************************/
-body {
-	@include sans-serif;
-	color: site-color('text');
-	line-height: baseline(1);
-	margin-top: ($baseline * 8);
-}
 
 // HEADINGS
 h1, h2, h3, h4, h5, h6 {
