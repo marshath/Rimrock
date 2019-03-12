@@ -63,8 +63,8 @@ Home page
 			width: 180vw;
 			height: 180vw;
 			margin: -40vw 0 0 -40vw;					// center spiral = (180 - 100) / 2
-			animation: spinner 8s linear infinite;		// 360 degree spin
-			mix-blend-mode: overlay;					// SVG overlay for cool color effect
+			//animation: spinner 8s linear infinite;		// 360 degree spin
+			//mix-blend-mode: overlay;					// SVG overlay for cool color effect
 		}
 	}
 	@include bp('laptop') {		//------- Laptop and up -------//
@@ -119,6 +119,37 @@ Home page
 	}
 }
 
+
+
+.home-videos, .home-photos {
+	header {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;				// title left, button right
+		margin: baseline(1) 0;
+		padding-bottom: 0.5em;								// push border bottom down, match section headers
+		border-bottom: 3px solid site-color('primary');			// match section headers
+	}
+	&:hover .btn {		// lighten button text on section hover
+		color: #999;
+	}
+	h3 {
+		margin: 0;		// remove h3 default margin
+	}
+}
+
+
+.home-photos .gallery {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	li {
+		flex-basis: 30%;
+	}
+	@include bp('tablet-v') {		//------- Tablet vertical and up -------//
+		flex-flow: row nowrap;
+	}
+}
 
 /*******************************
 Music
