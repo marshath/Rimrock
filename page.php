@@ -74,7 +74,7 @@
 									    // no rows found
 									endif;
 									
-								echo '</div>';
+									echo '</div>';
 								
 								} // end music ?>
 								
@@ -120,7 +120,8 @@
 									    // no rows found
 									endif;
 									
-								echo '</div>';
+										echo '<div class="video-wrap"></div>'; // extra div to force widow element right
+									echo '</div>';
 								
 								} // end videos ?>
 								
@@ -140,7 +141,10 @@
 									            <li>
 									                <figure>
 									                	<a href="<?php echo $image['url']; ?>">
-										                    <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; echo '. '; echo $image['caption'] ?>" />
+										                    <img src="<?php echo $image['sizes']['medium']; ?>" 
+										                    srcset="<?php echo $image['sizes']['medium']; ?> 300w,
+										                    <?php echo $image['sizes']['large']; ?> 600w"
+										                    alt="<?php echo $image['alt']; echo '. '; echo $image['caption'] ?>" />
 										                </a>
 									                </figure>
 									            </li>

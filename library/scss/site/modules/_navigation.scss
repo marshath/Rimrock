@@ -8,6 +8,13 @@
 /*******************************
 HEADER & FOOTER NAVIGATION 
 *******************************/
+#nav-menu {
+	display: none;				// hide menu
+	&.active {
+		display: block;			// show menu
+	}
+}
+
 .nav-header {
 	width:100%;
 	position: fixed;
@@ -36,13 +43,13 @@ HEADER & FOOTER NAVIGATION
 		flex-grow: 1;
 	}
 	a {
-		background-color: rgba(0,0,0,0.85);
+		background-color: rgba(0,0,0,0.9);
 		color: site-color('gray');
 		text-decoration: none;
 		padding: baseline(0.5) 0;
 		display: block;
 		&:hover, &:focus {
-			background-color: rgba(56,8,48,0.5);
+			background-color: rgba(42,6,36,0.9);
 			color: site-color('white') !important;
 		}
 		&:active {
@@ -60,7 +67,7 @@ li.current-menu-item a {
 		margin: 0;			// remove margin from h3
 	}
 	ul {
-		display: none; // hides the navigation, until the 'menu-toggle' is clicked
+		//display: none; // hides the navigation, until the 'menu-toggle' is clicked
 	}
 	li {
 		width: 100%;		// make full width
@@ -71,7 +78,10 @@ li.current-menu-item a {
 		display: flex; // shows the navigation, when the 'menu-toggle' is clicked
 		flex-flow: column nowrap;
 	}
-	@include bp('tablet-v') {
+	@include bp('tablet-v') {			//------------ Tablet vertical and above -------------//
+		#nav-menu {
+			display: block;				// show menu on tablet and above
+		}
 		ul {
 			display: flex; // shows the navigation
 			flex-flow: row wrap; // format as a row

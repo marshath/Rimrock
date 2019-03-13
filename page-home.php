@@ -19,13 +19,19 @@
 								<h1 class="page-title"><?php the_title(); ?></h1>
 							</header>
 
-							<section class="entry-content" itemprop="articleBody">
+							<section class="splash-content" itemprop="articleBody">
 								<div class="splash-band">Neutron Dawn</div>
 								<div class="splash-album">Rimrock</div>
 								<div class="splash-cta">Now available
-									<div class="btn-cta"><a href="">Download Rimrock</a></div>
+									<div class="btn-cta"><a href="<?php echo esc_url( home_url( '/music/' ) ); ?>">Download Rimrock</a></div>
 								</div>
 								<div class="splash-spiral"><img src="http://localhost:5757/neutrondawn.com/library/images/splash_spiral.svg" alt="spiral graphic"></div>
+								<div class="screen-reader-text">
+									<?php // the content
+										the_content();
+									?>
+								</div>
+								
 							</section>
 
 						</article>
@@ -34,7 +40,7 @@
 								
 							<header>
 								<h3>Videos</h3>
-								<div class="home-btns"><a href="/videos/" class="btn">View all videos</a></div>
+								<div class="home-btns"><a href="<?php echo esc_url( home_url( '/videos/' ) ); ?>" class="btn">View all videos</a></div>
 							</header>
 
 							<section class="entry-content" itemprop="articleBody">
@@ -45,50 +51,46 @@
 																		
 									if ( $vids->have_posts() ) : $vids->the_post();
 									
-										// check if the repeater field has rows of data
-										if( have_rows('video') ):
-									
 										echo '<div class="video">';
-										
-										 	// loop through the rows of data
-										 	while ( have_rows('video') ) : the_row();
-										 		// counter to break loop
-										 		$i++;
-										 		if( $i > 3 ): 
-													break;
-												endif;
-										
-												// display videos
-										
-												echo '<div class="video-wrap">
-													<a href="video-link">
+									
+								
+										$rows = get_field('video');
+										if($rows) $i = 0; { 			// start counter
+											shuffle( $rows ); 
+											foreach($rows as $row) { 
+												$i++;
+												if($i==4) break; 		// only display 3 videos, 4-1=3
 												
+												
+												echo '<div class="video-wrap">
+													<a href="', esc_url( home_url( '/library/videos/' ) ), $row['video_link'], '.mp4">
+																							
 														<div class="video-cover">
-															<figure><img src="', the_sub_field('video_image'), '" alt=""></figure>
+															<figure>
+																<img src="', $row['video_image'], '" alt"', $row['video_title'], '">
 															</figure>
 														</div>
-														
+				
 														<div class="video-info">
 														
-															<h3 class="video-title">', the_sub_field('video_title'), '</h3>
+															<h3 class="video-title">', $row['video_title'], '</h3>
 															
 															<div class="video-details">
-																<span class="video-year">', the_sub_field('video_year'), '</span> • <span class="video-duration">', the_sub_field('video_duration'), ' min</span>
+																<span class="video-year">', $row['video_year'], '</span> • <span class="video-duration">', $row['video_duration'], ' min</span>
 															</div>
 														
 														</div>
 													</a>
 												</div>';
+											}
+										}
 										
-										endwhile;
-									
 										echo '</div>';
-										
-										endif;
 									
 									endif;
 									wp_reset_postdata()
 								?>
+								
 							</section>
 
 						</article>
@@ -97,7 +99,7 @@
 								
 							<header>
 								<h3>Photos</h3>
-								<div class="home-btns"><a href="/photos/" class="btn">View all photos</a></div>
+								<div class="home-btns"><a href="<?php echo esc_url( home_url( '/photos/' ) ); ?>" class="btn">View all photos</a></div>
 							</header>
 
 							<section class="entry-content" itemprop="articleBody">
@@ -107,20 +109,29 @@
 									$pics = new WP_Query('page_id=16');
 																		
 									if ( $pics->have_posts() ) : $pics->the_post();
-									
+												
 										echo '<div class="photo-wrap">
-											<ul class="gallery">';
+											<ul class="gallery">';				
 											
-												$images = get_field('photo_gallery');
-												$rand1 = array_rand($images);
-												$rand2 = array_rand($images);
-												$rand3 = array_rand($images);
+											$images = get_field('photo_gallery');
 											
-											    if( $images ):
-													echo '<li><a href="'. $images[$rand1]['url'] .'">'. wp_get_attachment_image( $images[$rand1]['ID'], $size['medium'] ) .'</a></li>'; 
-													echo '<li><a href="'. $images[$rand2]['url'] .'">'. wp_get_attachment_image( $images[$rand2]['ID'], $size['medium'] ) .'</a></li>'; 
-													echo '<li><a href="'. $images[$rand3]['url'] .'">'. wp_get_attachment_image( $images[$rand3]['ID'], $size['medium'] ) .'</a></li>'; 
-												endif;
+											if( $images ):
+												$rand_keys = array_rand($images, 3);
+											
+												foreach( $rand_keys as $key ):
+													echo '<li>
+														<a href="', $images[$key]['url'], '">
+															<figure>
+																<img src="', $images[$key]['sizes']['medium'], '" 
+																	srcset="', $images[$key]['sizes']['medium'], ' 300w, ',
+																	$images[$key]['sizes']['large'], ' 600w" 
+																	alt="', $images[$key]['alt'], '. ', $images[$key]['caption'], '" />
+															</figure>
+														</a>
+													</li>';
+												endforeach;
+											
+											endif; 
 											
 											echo '</ul>
 										</div>';
@@ -128,10 +139,6 @@
 									endif;
 										
 									wp_reset_postdata()
-								?>
-								
-								<?php // the content
-									the_content();
 								?>
 							</section>
 

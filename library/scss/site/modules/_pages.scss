@@ -21,6 +21,11 @@ Home page
 	height: 100vw; 
 	max-height: 80vh;
 	text-align: center;
+	&-content {
+		display: block;				// make full width
+		height: 100%;				// make full height
+		position: relative;			// set positioning for splash content
+	}
 	&-band, &-album {
 		display: block;							// set full width
 		background-position: center center;
@@ -35,7 +40,7 @@ Home page
 	&-album {
 		display: block;
 		position: absolute;
-		top: 90vw;				// 100 - 10 hieght = 90
+		bottom: 0;				// align to bottom of .splash-content
 		left: 0;
 		background-image: url('http://localhost:5757/neutrondawn.com/library/images/splash_album.png');			// tounge image
 		width: 100%;
@@ -44,10 +49,12 @@ Home page
 	}
 	&-cta {
 		display: block;
-		position: relative;				// set for z-index
+		position: absolute;				// set for z-index
+		left: 50%;
+		top: 50%;
 		font-style: italic;
-		margin-top: 15vw;
 		z-index: 7;						// position above spiral
+		transform: translate(-50%, -50%);		// center orientation adjustment for centering
 	}
 	&-spiral {
 		display: block;
@@ -62,25 +69,31 @@ Home page
 		img {
 			width: 180vw;
 			height: 180vw;
+			//transform: translate(-50%, -50%);		// center spiral
 			margin: -40vw 0 0 -40vw;					// center spiral = (180 - 100) / 2
-			//animation: spinner 8s linear infinite;		// 360 degree spin
-			//mix-blend-mode: overlay;					// SVG overlay for cool color effect
+			animation: spinner 8s linear infinite;		// 360 degree spin
+			mix-blend-mode: overlay;					// SVG overlay for cool color effect
+		}
+	}
+	@include bp('tablet-v') {		//------- Tablet vertical and up -------//
+		&-spiral img {
+			//transform: translate(-22.5%, -30%);		// center spiral
+			margin: -30vw 0 0 -40vw;			// vertical adjustment
+		}
+	}
+	@include bp('tablet-v') {		//------- Tablet horizontal and up -------//
+		&-spiral img {
+			//transform: translate(-22.5%, -30%);		// center spiral
+			margin: -50vw 0 0 -40vw;			// vertical adjustment
 		}
 	}
 	@include bp('laptop') {		//------- Laptop and up -------//
-		&-band {
-		}
-		&-album {
-			top: 70vh;				// 100 - 10 hieght = 90
-		}
 		&-cta {
-			margin-top: baseline(2.5);				// fixed top spacing to center
 			font-size: 1.5em;						// enlarge font size for larger screens
 		}
-		&-spiral {
-			img {
-				margin: -50vw 0 0 -40vw;			// vertical adjustment
-			}
+		&-spiral img {
+			//transform: translate(-22.5%, -35%);		// center spiral
+			margin: -60vw 0 0 -40vw;			// vertical adjustment
 		}
 	}
 	@include bp('television') {		//------- Television and up -------//
@@ -89,11 +102,10 @@ Home page
 		&-album {
 		}
 		&-cta {
-			margin-top: baseline(1);				// fixed top spacing to center
 		}
 		&-spiral {
 			img {
-				margin: -65vw 0 0 -40vw;			// vertical adjustment
+				//margin: -65vw 0 0 -40vw;			// vertical adjustment
 			}
 		}
 	}
@@ -111,17 +123,20 @@ Home page
 		font-weight: bold;
 		font-style: normal;
 		border: 1px solid site-color('text');
+			box-shadow: 0 0 14px rgba(0,0,0,0);
 		&:hover {
 			background-color: rgba(255,255,255,1);
 			color: site-color('accent');
 			border-color: site-color('accent');
+			box-shadow: 0 0 14px rgba(0,0,0,0.5);
 		}
 	}
 }
 
 
-
 .home-videos, .home-photos {
+	display: block;
+	padding-top: baseline(1);						// space for .btn
 	header {
 		display: flex;
 		flex-flow: row nowrap;
@@ -138,25 +153,25 @@ Home page
 	}
 }
 
-
 .home-photos .gallery {
-	display: flex;
+	display: flex;							// override .gallery grid
 	flex-flow: column nowrap;
 	justify-content: space-between;
 	li {
 		flex-basis: 30%;
+		margin-bottom: baseline(1);			// vertical space between images
 	}
 	@include bp('tablet-v') {		//------- Tablet vertical and up -------//
 		flex-flow: row nowrap;
 	}
 }
 
+
 /*******************************
 Music
 *******************************/
 
 .album {
-	
 	&-wrap {
 		display: flex;
 		flex-flow: column nowrap;
@@ -165,6 +180,9 @@ Music
 		&:hover .album-cover {
 			transform-style: preserve-3d;
 			transform: rotateY(7deg) translateX(7px);
+		}
+		&:hover .btn {						// lighten button text
+			color: #999;
 		}
 	}
 	&-cover {
@@ -192,9 +210,6 @@ Music
 		text-transform: uppercase;
 	}
 	&-buttons {
-		&:hover .btn {						// lighten button text
-			color: #999;
-		}
 	}
 	&-download {
 		display: inline-block;
@@ -217,21 +232,9 @@ Music
 		&-info {								// subdetails, buttons, tracks
 			width: 65%;							// 100% - 30% width + 5% margin-right
 		}
-		&-title {
-		}
 		&-details {								// subdetails & buttons
 			flex-flow: row nowrap;
 			justify-content: space-between;			// push to the sides
-		}
-		&-subdetails {							// year & dmr spans
-		}
-		&-year {
-		}
-		&-dmr {
-		}
-		&-buttons {
-		}
-		&-download {
 		}
 		&-tracks {
 			column-count: 2;
@@ -243,24 +246,6 @@ Music
 			max-width: 1600px;
 			margin-left: auto;
 			margin-right: auto;
-		}
-		&-cover {
-		}
-		&-info {								// subdetails, buttons, tracks
-		}
-		&-title {
-		}
-		&-details {								// subdetails & buttons
-		}
-		&-subdetails {							// year & dmr spans
-		}
-		&-year {
-		}
-		&-dmr {
-		}
-		&-buttons {
-		}
-		&-download {
 		}
 		&-tracks {
 			column-count: 3;
@@ -276,6 +261,7 @@ Videos
 .video {
 	display: flex;
 	flex-flow: column nowrap;
+	align-content: flex-start;
 	justify-content: space-between;
 	&:hover .video-cover {
 		opacity: 0.8;
@@ -328,7 +314,7 @@ Photos
 }
 .gallery {
 	display: grid;
-	grid-auto-rows: 12%;
+	grid-auto-rows: 25vw;
 	grid-gap: 1rem;
 	grid-auto-flow: dense;
 	list-style: none;
@@ -359,6 +345,7 @@ Photos
 		}
 	}
 	@include bp('tablet-v') {		//------- Tablet Vertical -------//
+		grid-auto-rows: 17vw;			// override to display images
 		li:nth-child(8n) {				// include every 8th photo
 			grid-column: span 3; /* Spans two columns */
 			grid-row: span 3; /* Spans two rows */

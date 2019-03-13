@@ -45,29 +45,30 @@
 					<?php // if you'd like to use the site description you can un-comment it below
 						// bloginfo('description'); ?>
 
-					<nav class="nav-header" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<nav id="site-navigation" class="nav-header" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						
 						<?php // mobile menu toggle ?>
 						<h3 id="menu-toggle" class="menu-toggle-btn"><a href="#"><span class="menu-icon" aria-hidden="true" data-icon="&#xe000;"></span> <span class="menu-text">Menu</span></a></h3>
 						
 						<?php // menu items ?>
 						<div id="nav-menu">
-						<?php wp_nav_menu(array(
-							'container' => false,							// remove nav container
-							'container_class' => 'nav-menu',				// class of container (should you choose to use it)
-							'menu' => __( 'The Main Menu', 'bonestheme' ),	// nav name
-							'menu_class' => '',								// adding custom nav class
-							'theme_location' => 'main-nav',					// where it's located in the theme
-							'before' => '',									// before the menu
-							'after' => '',									// after the menu
-							'link_before' => '',							// before each link
-							'link_after' => '',								// after each link
-							'depth' => 0,									// limit the depth of the nav
-							'fallback_cb' => ''								// fallback function (if there is one)
-						)); ?>
+							<?php wp_nav_menu(array(
+								'container' => false,							// remove nav container
+								'container_class' => 'nav-menu',				// class of container (should you choose to use it)
+								'menu' => __( 'The Main Menu', 'bonestheme' ),	// nav name
+								'menu_class' => '',								// adding custom nav class
+								'theme_location' => 'main-nav',					// where it's located in the theme
+								'before' => '',									// before the menu
+								'after' => '',									// after the menu
+								'link_before' => '',							// before each link
+								'link_after' => '',								// after each link
+								'depth' => 0,									// limit the depth of the nav
+								'fallback_cb' => ''								// fallback function (if there is one)
+							)); ?>
 						</div>
 						
 					</nav>
+		
 
 				</div> <?php // end #inner-header .inner-wrap ?>
 			</header> <?php // end .header-wrap ?>
