@@ -193,19 +193,8 @@
 		"oA": 0,
 		"oAP": "/library/images/apple-touch-icon.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/library/images/custom-post-icon.png": {
-		"ft": 32768,
-		"iS": 462,
-		"oA": 0,
-		"oAP": "/library/images/custom-post-icon.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -223,8 +212,8 @@
 		"oA": 0,
 		"oAP": "/library/images/favicon_16.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -234,8 +223,8 @@
 		"oA": 0,
 		"oAP": "/library/images/favicon_16x16.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -245,8 +234,8 @@
 		"oA": 0,
 		"oAP": "/library/images/favicon_32.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -256,8 +245,8 @@
 		"oA": 0,
 		"oAP": "/library/images/favicon_32x32.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -267,48 +256,10 @@
 		"oA": 0,
 		"oAP": "/library/images/login-logo.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
-		},
-	"/library/images/logo.png": {
-		"ft": 32768,
-		"iS": 2569,
-		"oA": 0,
-		"oAP": "/library/images/logo.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/library/images/logo@2x.png": {
-		"ft": 32768,
-		"iS": 4803,
-		"oA": 0,
-		"oAP": "/library/images/logo@2x.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/library/images/nothing.gif": {
-		"ft": 4194304,
-		"iS": 1140,
-		"oA": 0,
-		"oAP": "/library/images/nothing.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/library/images/nothumb.gif": {
-		"ft": 4194304,
-		"iS": 1161,
-		"oA": 0,
-		"oAP": "/library/images/nothumb.gif",
-		"oF": 0,
-		"opt": 0
 		},
 	"/library/images/win8-tile-icon.png": {
 		"ft": 32768,
@@ -316,8 +267,8 @@
 		"oA": 0,
 		"oAP": "/library/images/win8-tile-icon.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -339,6 +290,17 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/library/js/min/scripts-ck-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/library/js/scripts-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/library/js/scripts-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -1778,8 +1740,8 @@
 		"oA": 0,
 		"oAP": "/screenshot.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},

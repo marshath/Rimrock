@@ -35,17 +35,17 @@ h6 {
 
 .site-title {
 	position: fixed;
-	top: $baseline;
+	top: 70px;
 	left: 0;
-	z-index: 0;
+	z-index: 0;				// set behind main content
 	color: rgba(50,50,50,0.5);
-	font-size: 8em;
-	//text-transform: lowercase;
+	font-size: 15vw;
+	text-align: center;
+	line-height: 0;			// remove default line-height
 }
 
 // PARAGRAPH
 p { 
-	text-indent: 1em;
 	margin-bottom: baseline(1);
 }
 
@@ -69,32 +69,6 @@ i, .italic { // Font style italic
 
 
 /*******************************
-BLOCKQUOTE
-*******************************/
-blockquote {
-	color: site-color('foreground');
-	font-style: italic;
-	padding:0 1em;
-	margin-bottom: baseline(1);
-	border-left: 2px solid site-color('foreground');
-	cite {
-		width: 100%;
-		text-align: right;
-		display: block;
-	}
-}
-
-
-/*******************************
-FIGURE CAPTION
-*******************************/
-figcaption {
-	color: site-color('foreground');
-	font-style: italic;
-}
-
-
-/*******************************
 DEFINITION LIST
 *******************************/
 dt { // Term
@@ -106,18 +80,10 @@ dd { // Defined
 
 
 /*******************************
-HORIZONTAL RULE
-*******************************/
-hr {
-	border-bottom:4px solid site-color('foreground');
-}
-
-
-/*******************************
 SELECTED TEXT
 *******************************/
 ::selection { 
-	background: site-color-alpha('primary','dark'); 
+	background: site-color-alpha('secondary', 'dark'); 
 }
 
 

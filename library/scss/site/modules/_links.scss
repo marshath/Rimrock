@@ -10,9 +10,14 @@ GLOBAL LINKS
 *******************************/
 a {
 	color: site-color('secondary');
+	text-decoration: none;
 	&:hover, &:focus {
-		color: site-color-lighten('primary',2);
+		color: site-color('accent');
 	}
+}
+.post-18 a {		// about page album links //
+	border-bottom: 2px solid site-color('accent');
+	font-style: italic;
 }
 
 // ALBUM DOWNLOADS //

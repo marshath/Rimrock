@@ -7,11 +7,11 @@
 
 body {
 	width: 100%; // sets width for grid columns
-	background: linear-gradient(to bottom, #240020 0%, #000000 20%, #000000 50%, #380830 100%) fixed;
+	background: linear-gradient(to bottom, #240020 3%, #000000 20%, #000000 50%, #380830 100%) fixed;
 	@include sans-serif;
 	color: site-color('text');
 	line-height: baseline(1);
-	margin-top: baseline(8);
+	margin-top: baseline(6);			// push main content down
 	&.home {
 		margin-top: baseline(2.25);			// push splash image under navigation
 	}
