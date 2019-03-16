@@ -11,9 +11,21 @@ body {
 	@include sans-serif;
 	color: site-color('text');
 	line-height: baseline(1);
-	margin-top: baseline(6);			// push main content down
+	margin-top: baseline(4);			// push main content down
 	&.home {
 		margin-top: baseline(2.25);			// push splash image under navigation
+	}
+	@include bp('tablet-v') {			//------------ Tablet vertical and above -------------//
+		margin-top: baseline(4.5);			// push splash image under navigation
+	}
+	@include bp('tablet-h') {			//------------ Tablet vertical and above -------------//
+		margin-top: baseline(5);			// push splash image under navigation
+	}
+	@include bp('laptop') {			//------------ Tablet vertical and above -------------//
+		margin-top: baseline(5.5);			// push splash image under navigation
+	}
+	@include bp('television') {			//------------ Tablet vertical and above -------------//
+		margin-top: baseline(6);			// push splash image under navigation
 	}
 }
 

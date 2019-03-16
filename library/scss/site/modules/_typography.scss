@@ -35,13 +35,18 @@ h6 {
 
 .site-title {
 	position: fixed;
-	top: 70px;
+	display: block;
+	font-family: 'Bree Serif', serif;
+	top: 70px;				// set down from the navigation
 	left: 0;
+	color: rgba(50,50,50,0.25);
+	font-size: 15vw;		// full width scaling text
+	width: 100%;			// set full width
+	white-space: nowrap;	// keep text on one line
 	z-index: 0;				// set behind main content
-	color: rgba(50,50,50,0.5);
-	font-size: 15vw;
-	text-align: center;
-	line-height: 0;			// remove default line-height
+}
+.article-header {
+	color: site-color-alpha('gray', 'light');
 }
 
 // PARAGRAPH
@@ -65,6 +70,11 @@ i, .italic { // Font style italic
 }
 .capitalize { // Capitalize word
 	text-transform: capitalize;
+}
+.footnote {
+	text-align: center;
+	font-size: 0.75em;
+	color: site-color('gray');
 }
 
 

@@ -150,6 +150,7 @@ Home page
 	}
 	h3 {
 		margin: 0;		// remove h3 default margin
+		color: site-color-alpha('gray', 'light');
 	}
 }
 
@@ -357,3 +358,21 @@ Photos
 		margin-right: auto;
 	}
 }
+
+
+/*******************************
+About
+*******************************/
+
+.post-18 {
+	h3 {
+		border-bottom: 2px solid site-color('primary');
+		padding-bottom: 0.5em;					// push bottom border down
+		padding-top: baseline(0.5);
+	}
+	p:first-of-type {		// enlarge font of the first paragraph for articist styling
+		font-size: 1.15em;
+		line-height: baseline(1.1);
+	}
+}
+

@@ -25,7 +25,7 @@
 								<div class="splash-cta">Now available
 									<div class="btn-cta"><a href="<?php echo esc_url( home_url( '/music/' ) ); ?>">Download Rimrock</a></div>
 								</div>
-								<div class="splash-spiral"><img src="http://localhost:5757/neutrondawn.com/library/images/splash_spiral.svg" alt="spiral graphic"></div>
+								<div class="splash-spiral"><img src="<?php echo esc_url( home_url() ); ?>/library/images/splash_spiral.svg" alt="spiral graphic"></div>
 								<div class="screen-reader-text">
 									<?php // the content
 										the_content();

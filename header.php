@@ -23,8 +23,10 @@
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-		<?php // header includes
-			// get_template_part('inc/header-social'); // includes social media profiles 
+		<?php // header includes ?>
+			<?php /* Google Fonts */ ?>
+			<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+			<?php // get_template_part('inc/header-social'); // includes social media profiles 
 			// get_template_part('inc/header-plugins'); // includes plugins and analytics ?>
 
 		<?php // wordpress head functions

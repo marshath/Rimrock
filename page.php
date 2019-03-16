@@ -74,7 +74,8 @@
 									    // no rows found
 									endif;
 									
-									echo '</div>';
+									echo '</div>
+									<div class="footnote"><b>*</b> indicates song written by other bands</div>';
 								
 								} // end music ?>
 								
