@@ -9,23 +9,23 @@
 			<div id="content">
 				<div id="inner-content" class="wrap">
 
-					<main id="main" class="home-wrap" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<main id="main" class="home-wrap" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-						<article id="post-<?php the_ID(); ?>" <?php post_class( 'splash' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+						<article id="post-<?php the_ID(); ?>" <?php post_class( 'splash' ); ?>>
 
 							<header class="article-header">
 								<h1 class="page-title"><?php the_title(); ?></h1>
 							</header>
 
-							<section class="splash-content" itemprop="articleBody">
+							<section class="splash-content">
 								<div class="splash-band">Neutron Dawn</div>
 								<div class="splash-album">Rimrock</div>
 								<div class="splash-cta">Now available
 									<div class="btn-cta"><a href="<?php echo esc_url( home_url( '/music/' ) ); ?>">Download Rimrock</a></div>
 								</div>
-								<div class="splash-spiral"><img src="<?php echo esc_url( home_url() ); ?>/library/images/splash_spiral.svg" alt="spiral graphic"></div>
+								<div class="splash-spiral"><img src="<?php echo esc_url( home_url() ); ?>/library/images/splash_spiral.svg"></div>
 								<div class="screen-reader-text">
 									<?php // the content
 										the_content();
@@ -36,14 +36,14 @@
 
 						</article>
 						
-						<article id="post-<?php the_ID(); ?>" <?php post_class( 'main-wrap home-videos' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+						<article id="post-<?php the_ID(); ?>" <?php post_class( 'main-wrap home-videos' ); ?>>
 								
 							<header>
 								<h3>Videos</h3>
 								<div class="home-btns"><a href="<?php echo esc_url( home_url( '/videos/' ) ); ?>" class="btn">View all videos</a></div>
 							</header>
 
-							<section class="entry-content" itemprop="articleBody">
+							<section class="entry-content">
 								
 								<?php // new query on videos page
 			
@@ -63,7 +63,7 @@
 												
 												
 												echo '<div class="video-wrap">
-													<a href="', esc_url( home_url( '/library/videos/' ) ), $row['video_link'], '.mp4">
+													<a href="', esc_url( home_url( '/library/videos' ) ), $row['video_link'], '.mp4">
 																							
 														<div class="video-cover">
 															<figure>
@@ -95,14 +95,14 @@
 
 						</article>
 						
-						<article id="post-<?php the_ID(); ?>" <?php post_class( 'main-wrap home-photos' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+						<article id="post-<?php the_ID(); ?>" <?php post_class( 'main-wrap home-photos' ); ?>>
 								
 							<header>
 								<h3>Photos</h3>
 								<div class="home-btns"><a href="<?php echo esc_url( home_url( '/photos/' ) ); ?>" class="btn">View all photos</a></div>
 							</header>
 
-							<section class="entry-content" itemprop="articleBody">
+							<section class="entry-content">
 								
 								<?php // new query on photos page
 			
@@ -121,7 +121,7 @@
 												foreach( $rand_keys as $key ):
 													echo '<li>
 														<a href="', $images[$key]['url'], '">
-															<figure>
+															<figure itemprop="image">
 																<img src="', $images[$key]['sizes']['medium'], '" 
 																	srcset="', $images[$key]['sizes']['medium'], ' 300w, ',
 																	$images[$key]['sizes']['large'], ' 600w" 

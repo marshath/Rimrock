@@ -3,17 +3,17 @@
 			<div id="content">
 				<div id="inner-content" class="wrap">
 
-					<main id="main" class="main-wrap" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<main id="main" class="main-wrap" role="main">
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-						<article id="post-<?php the_ID(); ?>" <?php post_class( 'inner-wrap' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+						<article id="post-<?php the_ID(); ?>" <?php post_class( 'inner-wrap' ); ?>>
 
 							<header class="article-header">
 								<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 							</header> <?php // end .article header ?>
 
-							<section class="entry-content" itemprop="articleBody">
+							<section class="entry-content">
 								<?php 
 									// the content
 									the_content();
@@ -34,15 +34,15 @@
 									    while ( have_rows('album') ) : the_row();
 									
 									        // display albums
-											echo '<div class="album-wrap">
+											echo '<div class="album-wrap" itemscope itemtype="http://schema.org/CreativeWork">
 											
 												<div class="album-cover">
-													<figure><img src="', the_sub_field('album_cover'), '" alt=""></figure>
+													<figure><img itemprop="thumbnail" src="', the_sub_field('album_cover'), '" alt="Album cover artwork"></figure>
 												</div>
 												
 												<div class="album-info">
 													
-													<h3 class="album-title">', the_sub_field('album_title'), '</h3>
+													<h3 class="album-title" itemprop="inAlbum">', the_sub_field('album_title'), '</h3>
 													
 													<div class="album-details">
 													
@@ -54,8 +54,8 @@
 														
 														<div class="album-buttons">
 															<div class="album-download">Download: </div>
-															<a href="', the_sub_field('download_itunes'), '" class="btn">iTunes</a>
-															<a href="', the_sub_field('download_mp3'), '" class="btn">MP3</a>
+															<a href="/library/music/', the_sub_field('download_link'), '/', the_sub_field('download_link'), '.zip" class="btn" itemprop="offers">iTunes</a>
+															<a href="/library/music/', the_sub_field('download_link'), '/', the_sub_field('download_link'), '-mp3.zip" class="btn" itemprop="offers">MP3</a>
 														</div>
 														
 													</div>
@@ -75,7 +75,7 @@
 									endif;
 									
 									echo '</div>
-									<div class="footnote"><b>*</b> indicates song written by other bands</div>';
+									<div class="footnote"><b>*</b> indicates song written by other bands. In other words, cover songs.</div>';
 								
 								} // end music ?>
 								
@@ -95,20 +95,20 @@
 									
 									        // display videos
 									        
-											echo '<div class="video-wrap">
-												<a href="video-link">
+											echo '<div class="video-wrap" itemprop="video"  itemscope itemtype="http://schema.org/CreativeWork">
+												<a href="/library/videos/', the_sub_field('video_link'), '.mp4">
 											
 													<div class="video-cover">
-														<figure><img src="', the_sub_field('video_image'), '" alt=""></figure>
+														<figure><img itemprop="thumbnail" src="', the_sub_field('video_image'), '" alt="Video Poster"></figure>
 														</figure>
 													</div>
 													
 													<div class="video-info">
 													
-														<h3 class="video-title">', the_sub_field('video_title'), '</h3>
+														<h3 class="video-title" itemprop="name">', the_sub_field('video_title'), '</h3>
 														
 														<div class="video-details">
-															<span class="video-year">', the_sub_field('video_year'), '</span> • <span class="video-duration">', the_sub_field('video_duration'), ' min</span>
+															<span class="video-year">', the_sub_field('video_year'), '</span> • <span class="video-duration" itemprop="duration">', the_sub_field('video_duration'), ' min</span>
 														</div>
 													
 													</div>
@@ -122,6 +122,7 @@
 									endif;
 									
 										echo '<div class="video-wrap"></div>'; // extra div to force widow element right
+										echo '<div class="video-wrap"></div>'; // extra div to force widow element right
 									echo '</div>';
 								
 								} // end videos ?>
@@ -132,7 +133,7 @@
 								//-------------------------------
 								if (is_page('photos')) {
 									
-									echo '<div class="photo-wrap">';
+									echo '<div class="photo-wrap" itemscope itemtype="http://schema.org/imageGallery">';
 									
 									$images = get_field('photo_gallery');
 
@@ -141,7 +142,7 @@
 									        <?php foreach( $images as $image ): ?>
 									            <li>
 									                <figure>
-									                	<a href="<?php echo $image['url']; ?>">
+									                	<a href="<?php echo $image['url']; ?>" itemprop="image">
 										                    <img src="<?php echo $image['sizes']['medium']; ?>" 
 										                    srcset="<?php echo $image['sizes']['medium']; ?> 300w,
 										                    <?php echo $image['sizes']['large']; ?> 600w"
