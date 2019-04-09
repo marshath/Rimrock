@@ -34,7 +34,8 @@
 									    while ( have_rows('album') ) : the_row();
 									
 									        // display albums
-											echo '<div class="album-wrap" itemscope itemtype="http://schema.org/CreativeWork">
+											echo '<a id="', the_sub_field('dmr_age'), '"></a>
+											<div class="album-wrap" itemscope itemtype="http://schema.org/CreativeWork">
 											
 												<div class="album-cover">
 													<figure><img itemprop="thumbnail" src="', the_sub_field('album_cover'), '" alt="Album cover artwork"></figure>
