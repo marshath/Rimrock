@@ -32,13 +32,12 @@
 									
 									 	// loop through the rows of data
 									    while ( have_rows('album') ) : the_row();
-									
 									        // display albums
 											echo '<a id="', the_sub_field('dmr_age'), '"></a>
 											<div class="album-wrap" itemscope itemtype="http://schema.org/CreativeWork">
 											
 												<div class="album-cover">
-													<figure><img itemprop="thumbnail" src="', the_sub_field('album_cover'), '" alt="Album cover artwork"></figure>
+													<figure><img src="', the_sub_field('album_cover'), '" alt="Album cover artwork" itemprop="thumbnail"></figure>
 												</div>
 												
 												<div class="album-info">
@@ -48,8 +47,7 @@
 													<div class="album-details">
 													
 														<div class="album-subdetails">
-															<span class="album-year">', the_sub_field('album_year'), '</span> 
-															• 
+															<span class="album-year">', the_sub_field('album_year'), '</span> 																				• 
 															<span class="album-dmr">dmr0', the_sub_field('dmr_age'), '</span>
 														</div>
 														
@@ -144,9 +142,9 @@
 									            <li>
 									                <figure>
 									                	<a href="<?php echo $image['url']; ?>" itemprop="image">
-										                    <img src="<?php echo $image['sizes']['medium']; ?>" 
-										                    srcset="<?php echo $image['sizes']['medium']; ?> 300w,
+										                    <img srcset="<?php echo $image['sizes']['medium']; ?> 300w,
 										                    <?php echo $image['sizes']['large']; ?> 600w"
+										                    src="<?php echo $image['sizes']['medium']; ?>" 
 										                    alt="<?php echo $image['alt']; echo '. '; echo $image['caption'] ?>" />
 										                </a>
 									                </figure>

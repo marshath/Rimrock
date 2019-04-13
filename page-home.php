@@ -60,14 +60,12 @@
 											foreach($rows as $row) { 
 												$i++;
 												if($i==4) break; 		// only display 3 videos, 4-1=3
-												
-												
 												echo '<div class="video-wrap">
 													<a href="', esc_url( home_url( '/library/videos' ) ), $row['video_link'], '.mp4">
 																							
 														<div class="video-cover">
 															<figure>
-																<img src="', $row['video_image'], '" alt"', $row['video_title'], '">
+																<img src="', $row['video_image'], '" alt="', $row['video_title'], '">
 															</figure>
 														</div>
 				
@@ -122,9 +120,9 @@
 													echo '<li>
 														<a href="', $images[$key]['url'], '">
 															<figure itemprop="image">
-																<img src="', $images[$key]['sizes']['medium'], '" 
-																	srcset="', $images[$key]['sizes']['medium'], ' 300w, ',
-																	$images[$key]['sizes']['large'], ' 600w" 
+																<img srcset="', $images[$key]['sizes']['medium'], ' 300w,
+																	',$images[$key]['sizes']['large'], ' 600w" 
+																	src="', $images[$key]['sizes']['medium'], '" 
 																	alt="', $images[$key]['alt'], '. ', $images[$key]['caption'], '" />
 															</figure>
 														</a>

@@ -77,8 +77,8 @@ if ( ! isset( $content_width ) ) {
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'bones-thumb-600', 600, 150, true );
-add_image_size( 'bones-thumb-300', 300, 100, true );
+// add_image_size( 'bones-thumb-600', 600, 150, true );
+// add_image_size( 'bones-thumb-300', 300, 100, true );
 
 /*
 to add more sizes, simply copy a line from above
@@ -100,14 +100,14 @@ You can change the names and dimensions to whatever
 you like. Enjoy!
 */
 
-add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
+/* add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 
 function bones_custom_image_sizes( $sizes ) {
 	return array_merge( $sizes, array(
 		'bones-thumb-600' => __('600px by 150px'),
 		'bones-thumb-300' => __('300px by 100px'),
 	) );
-}
+} */
 
 /*
 The function above adds the ability to use the dropdown menu to select
@@ -157,7 +157,7 @@ add_action( 'customize_register', 'bones_theme_customizer' );
 /************* ACTIVE SIDEBARS ********************/
 
 // Sidebars & Widgetizes Areas
-function bones_register_sidebars() {
+/* function bones_register_sidebars() {
 	register_sidebar(array(
 		'id' => 'sidebar-blog',
 		'name' => __( 'Sidebar —Blog', 'bonestheme' ),
@@ -188,7 +188,7 @@ function bones_register_sidebars() {
 		'after_title' => '</h4>',
 	));
 	
-} // don't remove this bracket!
+} // don't remove this bracket! */
 
 
 /************* COMMENT LAYOUT *********************/
@@ -236,10 +236,10 @@ function bones_comments( $comment, $args, $depth ) {
 /*
 This is a modification of a function found in the twentythirteen theme where we can declare some external fonts. If you're using Google Fonts, you can replace these fonts, change it in your scss files and be up and running in seconds.
 */
-function bones_fonts() {
+/* function bones_fonts() {
 	wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
 }
-add_action('wp_enqueue_scripts', 'bones_fonts');
+add_action('wp_enqueue_scripts', 'bones_fonts'); */
 
 // Enable support for HTML5 markup.
 add_theme_support( 'html5', array(
