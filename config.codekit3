@@ -1770,14 +1770,6 @@
 		"oAP": "/style-min.css",
 		"oF": 0,
 		"oS": 3
-		},
-	"/taxonomy-custom_cat.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/taxonomy-custom_cat.php",
-		"oF": 0
 		}
 	},
 "hooks": [
