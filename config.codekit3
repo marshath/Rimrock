@@ -17,14 +17,6 @@
 		"oAP": "/404.php",
 		"oF": 0
 		},
-	"/archive-custom_type.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/archive-custom_type.php",
-		"oF": 0
-		},
 	"/archive.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -47,14 +39,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/footer.php",
-		"oF": 0
-		},
-	"/frontpage.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/frontpage.php",
 		"oF": 0
 		},
 	"/functions.php": {
@@ -1603,14 +1587,6 @@
 		"oAP": "/library/translation/zh_CN.po",
 		"oF": 0
 		},
-	"/page-custom.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/page-custom.php",
-		"oF": 0
-		},
 	"/page-home.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1767,14 +1743,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/sidebar.php",
-		"oF": 0
-		},
-	"/single-custom_type.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/single-custom_type.php",
 		"oF": 0
 		},
 	"/single.php": {
