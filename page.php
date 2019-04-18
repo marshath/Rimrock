@@ -33,6 +33,7 @@
 									 	// loop through the rows of data
 									    while ( have_rows('album') ) : the_row();
 									        // display albums
+									        
 											echo '<a id="', the_sub_field('dmr_age'), '"></a>
 											<div class="album-wrap" itemscope itemtype="http://schema.org/CreativeWork">
 											
@@ -54,7 +55,7 @@
 														<div class="album-buttons">
 															<div class="album-download">Download: </div>
 															<a href="/library/music/', the_sub_field('download_link'), '/', the_sub_field('download_link'), '.zip" class="btn" itemprop="offers">iTunes</a>
-															<a href="/library/music/', the_sub_field('download_link'), '/', the_sub_field('download_link'), '-mp3.zip" class="btn" itemprop="offers">MP3</a>
+															<a href="/library/music/', the_sub_field('download_link'), '/', the_sub_field('download_link'), '_mp3.zip" class="btn" itemprop="offers">MP3</a>
 														</div>
 														
 													</div>
