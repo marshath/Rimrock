@@ -33,7 +33,7 @@ Home page
 		color: rgba(255,255,255,0);				// remove text
 	}
 	&-band {
-		background-image: url('http://neutrondawn.com/library/images/splash_band-400.png');				// band name image
+		background-image: url('/library/images/splash_band-400.png');				// band name image
 		height: 25vw;			// sets background image to scale full width
 		max-height: 30vh;		// stop scaling up
 	}
@@ -42,7 +42,7 @@ Home page
 		position: absolute;
 		bottom: 0;				// align to bottom of .splash-content
 		left: 0;
-		background-image: url('http://neutrondawn.com/library/images/splash_album-400.png');			// album name image
+		background-image: url('/library/images/splash_album-400.png');			// album name image
 		width: 100%;
 		height: 7vw;			// sets background image to scale full width
 		max-height: 7vh;		// stop scaling up
@@ -78,37 +78,37 @@ Home page
 	@include bp('phone-v-retina') {	//------- Phone vertical and up and retina display -------//
 		background-image: url('/library/images/splash_hero-600.jpg');									// tounge image
 		&-band {
-			background-image: url('http://neutrondawn.com/library/images/splash_band-600.png');			// band name image
+			background-image: url('/library/images/splash_band-600.png');			// band name image
 		}
 		&-album {
-			background-image: url('http://neutrondawn.com/library/images/splash_album-600.png');		// album name image
+			background-image: url('/library/images/splash_album-600.png');		// album name image
 		}
 	}
 	@include bp('phone-h') {		//------- Phone horizontal and up -------//
 		background-image: url('/library/images/splash_hero-600.jpg');									// tounge image
 		&-band {
-			background-image: url('http://neutrondawn.com/library/images/splash_band-600.png');			// band name image
+			background-image: url('/library/images/splash_band-600.png');			// band name image
 		}
 		&-album {
-			background-image: url('http://neutrondawn.com/library/images/splash_album-600.png');		// album name image
+			background-image: url('/library/images/splash_album-600.png');		// album name image
 		}
 	}
 	@include bp('phone-h-retina') {	//------- Phone horizontal and up and retina display -------//
 		background-image: url('/library/images/splash_hero-1200.jpg');									// tounge image
 		&-band {
-			background-image: url('http://neutrondawn.com/library/images/splash_band.png');		// band name image
+			background-image: url('/library/images/splash_band.png');		// band name image
 		}
 		&-album {
-			background-image: url('http://neutrondawn.com/library/images/splash_album.png');		// album name image
+			background-image: url('/library/images/splash_album.png');		// album name image
 		}
 	}
 	@include bp('tablet-v') {		//------- Tablet vertical and up -------//
 		background-image: url('/library/images/splash_hero-800.jpg');									// tounge image
 		&-band {
-			background-image: url('http://neutrondawn.com/library/images/splash_band-800.png');			// band name image
+			background-image: url('/library/images/splash_band-800.png');			// band name image
 		}
 		&-album {
-			background-image: url('http://neutrondawn.com/library/images/splash_album-800.png');		// album name image
+			background-image: url('/library/images/splash_album-800.png');		// album name image
 		}
 		&-spiral img {
 			// transform: translate(-22.5%, -30%);		// center spiral
@@ -121,10 +121,10 @@ Home page
 	@include bp('tablet-h') {		//------- Tablet horizontal and up -------//
 		background-image: url('/library/images/splash_hero-1000.jpg');									// tounge image
 		&-band {
-			background-image: url('http://neutrondawn.com/library/images/splash_band-1000.png');			// band name image
+			background-image: url('/library/images/splash_band-1000.png');			// band name image
 		}
 		&-album {
-			background-image: url('http://neutrondawn.com/library/images/splash_album.png');		// album name image
+			background-image: url('/library/images/splash_album.png');		// album name image
 		}
 		&-spiral img {
 			// transform: translate(-22.5%, -30%);		// center spiral
@@ -137,7 +137,7 @@ Home page
 	@include bp('laptop') {		//------- Laptop and up -------//
 		background-image: url('/library/images/splash_hero-1600.jpg');									// tounge image
 		&-band {
-			background-image: url('http://neutrondawn.com/library/images/splash_band.png');			// band name image
+			background-image: url('/library/images/splash_band.png');			// band name image
 		}
 		&-cta {
 			font-size: 1.5em;							// enlarge font size for larger screens

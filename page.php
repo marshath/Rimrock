@@ -35,7 +35,7 @@
 									        // display albums
 									        
 											echo '<a id="', the_sub_field('dmr_age'), '"></a>
-											<div class="album-wrap" itemscope itemtype="http://schema.org/CreativeWork">
+											<div class="album-wrap" itemscope itemtype="https://schema.org/CreativeWork">
 											
 												<div class="album-cover">
 													<figure><img src="', the_sub_field('album_cover'), '" alt="Album cover artwork" itemprop="thumbnail"></figure>
@@ -95,7 +95,7 @@
 									
 									        // display videos
 									        
-											echo '<div class="video-wrap" itemprop="video"  itemscope itemtype="http://schema.org/CreativeWork">
+											echo '<div class="video-wrap" itemprop="video"  itemscope itemtype="https://schema.org/CreativeWork">
 												<a href="/library/videos/', the_sub_field('video_link'), '.mp4">
 											
 													<div class="video-cover">
@@ -133,7 +133,7 @@
 								//-------------------------------
 								if (is_page('photos')) {
 									
-									echo '<div class="photo-wrap" itemscope itemtype="http://schema.org/imageGallery">';
+									echo '<div class="photo-wrap" itemscope itemtype="https://schema.org/imageGallery">';
 									
 									$images = get_field('photo_gallery');
 

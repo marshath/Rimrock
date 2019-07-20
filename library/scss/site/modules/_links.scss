@@ -27,6 +27,7 @@ p a {		// about page album links //
 	background-color: site-color('primary');
 	text-decoration: none;
 	color: site-color('gray');
+	border-bottom: 3px solid site-color('foreground');
 	&:hover, &:focus {
 		background-color: site-color('foreground');
 		color: site-color('white') !important;				// override .album-buttons from _pages	

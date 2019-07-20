@@ -6,6 +6,16 @@
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134184681-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'UA-134184681-1');
+		</script>
+
 		<meta charset="utf-8">
 
 		<?php // force Internet Explorer to use the latest rendering engine available ?>
@@ -34,11 +44,11 @@
 
 	</head>
 
-	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/MusicGroup">
+	<body <?php body_class(); ?> itemscope itemtype="https://schema.org/MusicGroup">
 
 		<div id="container" class="page-wrap">
 
-			<header class="header-wrap" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+			<header class="header-wrap" role="banner" itemscope itemtype="https://schema.org/WPHeader">
 				<div id="inner-header" class="">
 
 					<?php // Compnay logo or text ?>
@@ -47,7 +57,7 @@
 					<?php // if you'd like to use the site description you can un-comment it below
 						// bloginfo('description'); ?>
 
-					<nav id="site-navigation" class="nav-header" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<nav id="site-navigation" class="nav-header" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
 						
 						<?php // mobile menu toggle ?>
 						<h3 id="menu-toggle" class="menu-toggle-btn"><a href="#"><span class="menu-icon" aria-hidden="true" data-icon="&#xe000;"></span> <span class="menu-text">Menu</span></a></h3>
